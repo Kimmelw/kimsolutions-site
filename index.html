@@ -4,61 +4,213 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KIM Software Solutions</title>
+<meta name="description" content="Suporte remoto para Windows e Linux. Backup, remoção de vírus, migração de sistemas, instalação de software e segurança digital.">
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#0d1117;
-    color:white;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#001f3f,#003f5c,#007a5e);
+    padding:70px 20px;
     text-align:center;
-    padding:50px;
 }
 
-h1{
+header h1{
+    font-size:46px;
     color:#00d4ff;
-    font-size:48px;
+    margin-bottom:10px;
 }
 
-h2{
+header h2{
     color:#00ff99;
+    font-size:24px;
+    margin-bottom:20px;
 }
 
-.container{
-    max-width:800px;
+header p{
+    max-width:750px;
     margin:auto;
+    font-size:18px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
+    margin-top:30px;
+    padding:14px 28px;
     background:#00d4ff;
-    color:black;
+    color:#000;
     text-decoration:none;
     border-radius:8px;
     font-weight:bold;
+}
+
+section{
+    padding:55px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#00d4ff;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #263241;
+}
+
+.card h3{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+.about{
+    background:#111827;
+    border-radius:12px;
+    padding:30px;
+    border:1px solid #263241;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    background:#161b22;
+    display:inline-block;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #263241;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#070b10;
+    color:#aaaaaa;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:34px;
+    }
+
+    header h2{
+        font-size:20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h1>KIM Software Solutions</h1>
+    <h2>Suporte Remoto para Windows e Linux</h2>
+    <p>
+        Soluções digitais para pessoas e pequenos negócios.
+        Atendimento remoto, manutenção de computadores, backup,
+        segurança digital e suporte técnico com praticidade.
+    </p>
+    <a class="btn" href="#contato">Solicitar Suporte</a>
+</header>
 
-<h1>KIM Software Solutions</h1>
+<section>
+    <h2 class="section-title">Serviços</h2>
 
-<h2>Suporte Remoto Windows e Linux</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Suporte Remoto</h3>
+            <p>Atendimento online para resolver problemas sem sair de casa.</p>
+        </div>
 
-<p>
-Remoção de vírus • Backup • Migração de sistemas •
-Instalação de software • Segurança digital
-</p>
+        <div class="card">
+            <h3>Remoção de Vírus</h3>
+            <p>Limpeza de ameaças, programas indesejados e lentidão no sistema.</p>
+        </div>
 
-<a class="btn" href="#">
-Solicitar Suporte
-</a>
+        <div class="card">
+            <h3>Backup de Dados</h3>
+            <p>Organização e cópia segura de documentos, fotos e arquivos importantes.</p>
+        </div>
 
-</div>
+        <div class="card">
+            <h3>Migração de Sistemas</h3>
+            <p>Ajuda para migração de arquivos, troca de disco e configuração inicial.</p>
+        </div>
+
+        <div class="card">
+            <h3>Suporte Linux</h3>
+            <p>Instalação, configuração, terminal, pacotes e ambientes de trabalho.</p>
+        </div>
+
+        <div class="card">
+            <h3>Instalação de Software</h3>
+            <p>Instalação e configuração de programas, navegadores e ferramentas úteis.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Sobre</h2>
+
+    <div class="about">
+        <p>
+            A KIM Software Solutions oferece suporte técnico remoto,
+            manutenção preventiva, segurança digital, backup de dados
+            e soluções para Windows e Linux.
+        </p>
+        <br>
+        <p>
+            Nosso objetivo é ajudar usuários e pequenos negócios a manterem
+            seus computadores funcionando com mais segurança, organização
+            e eficiência.
+        </p>
+    </div>
+</section>
+
+<section id="contato" class="contact">
+    <h2 class="section-title">Contato</h2>
+
+    <div class="contact-box">
+        <p><strong>E-mail:</strong></p>
+        <p>kimsoftwaresolutions@gmail.com</p>
+        <br>
+        <p><strong>Site:</strong></p>
+        <p>kimsolutions.com.br</p>
+        <br>
+        <a class="btn" href="mailto:kimsoftwaresolutions@gmail.com">
+            Enviar E-mail
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 KIM Software Solutions. Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
