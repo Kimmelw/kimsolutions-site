@@ -37,11 +37,11 @@ section{
     font-size:32px;
     margin-bottom:35px;
 }
+
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:20px;
-    align-items:stretch;
 }
 
 .card{
@@ -49,10 +49,6 @@ section{
     padding:25px;
     border-radius:12px;
     border:1px solid #263241;
-
-    display:flex;
-    flex-direction:column;
-    min-height:100%;
 }
 
 .card h3{
@@ -60,14 +56,26 @@ section{
     margin-bottom:10px;
 }
 
-.card p{
-    flex-grow:1;
+.about{
+    background:#111827;
+    border-radius:12px;
+    padding:30px;
+    border:1px solid #263241;
 }
 
-.card .btn{
-    align-self:flex-start;
+.contact{
+    text-align:center;
 }
 
+.contact-box{
+    background:#161b22;
+    display:inline-block;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #263241;
+}
+
+.btn{
     display:inline-block;
     margin-top:20px;
     padding:14px 28px;
@@ -78,51 +86,12 @@ section{
     font-weight:bold;
 }
 
-.button-group{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-top:25px;
-    margin-bottom:25px;
-}
-
-.button-group .btn{
-    margin-top:0;
-    min-width:180px;
-    text-align:center;
-}
-
-.payment-box{
-    margin-top:25px;
-    padding:20px;
-    background:#111827;
-    border:1px solid #263241;
-    border-radius:12px;
-}
-
-.payment-box h3{
-    color:#00ff99;
-    margin-bottom:10px;
-}
-
 footer{
     text-align:center;
     padding:25px;
     background:#070b10;
     color:#aaaaaa;
     font-size:14px;
-}
-
-@media(max-width:600px){
-    .button-group{
-        flex-direction:column;
-    }
-
-    .button-group .btn{
-        width:100%;
-    }
 }
 </style>
 </head>
@@ -187,6 +156,7 @@ footer{
     </div>
 </section>
 
+
 <section id="clientes">
     <h2 class="section-title">Área do Cliente</h2>
 
@@ -221,45 +191,18 @@ footer{
 </section>
 
 <section id="contato" class="contact">
-    <h2 class="section-title">Contato e Pagamento</h2>
+    <h2 class="section-title">Contato</h2>
 
     <div class="contact-box">
-        <p><strong>Solicite seu suporte:</strong></p>
-        <p>Atendimento remoto para Windows, Linux, backup, vírus e configuração de software.</p>
-
-        <div class="button-group">
-            <a class="btn" href="https://wa.me/5549999027726" target="_blank" rel="noopener noreferrer">
-                WhatsApp
-            </a>
-
-            <a class="btn" href="mailto:kimsoftwaresolutions@gmail.com">
-                E-mail
-            </a>
-
-            <a class="btn" href="#clientes">
-                Solicitar Suporte
-            </a>
-        </div>
-
         <p><strong>E-mail:</strong></p>
         <p>kimsoftwaresolutions@gmail.com</p>
-
         <br>
-
         <p><strong>Site:</strong></p>
         <p>kimsolutions.com.br</p>
-
-        <div class="payment-box">
-            <h3>Pagamento</h3>
-            <p><strong>Método disponível:</strong> PIX</p>
-            <br>
-            <p>
-                Após a análise do serviço, a chave PIX será enviada ao cliente para pagamento.
-            </p>
-            <p>
-                O suporte será iniciado após a confirmação do pagamento.
-            </p>
-        </div>
+        <br>
+        <a class="btn" href="mailto:kimsoftwaresolutions@gmail.com">
+            Enviar E-mail
+        </a>
     </div>
 </section>
 
