@@ -7,23 +7,28 @@
 <meta name="description" content="Soporte remoto para Windows y Linux. Backup, seguridad digital, mantenimiento de computadoras, instalación de software y recuperación de datos.">
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0d1117;
     color:#ffffff;
     line-height:1.6;
-    margin:0;
+}
+
+.hero img{
+    width:100%;
+    display:block;
 }
 
 section{
     max-width:1100px;
     margin:auto;
     padding:55px 20px;
-}
-
-.hero img{
-    width:100%;
-    display:block;
 }
 
 .section-title{
@@ -33,29 +38,86 @@ section{
     margin-bottom:35px;
 }
 
-.card, .about, .contact-box{
-    background:#161b22;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid #263241;
-}
-
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:20px;
 }
 
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #263241;
+}
+
 .card h3{
     color:#00ff99;
+    margin-bottom:10px;
+}
+
+.about{
+    background:#111827;
+    border-radius:12px;
+    padding:30px;
+    border:1px solid #263241;
 }
 
 .contact{
     text-align:center;
 }
 
+.contact-box{
+    background:#161b22;
+    display:inline-block;
+    max-width:760px;
+    width:100%;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #263241;
+}
+
 a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+a:hover{
     color:#00d4ff;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#00d4ff;
+    color:#000000;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    color:#000000;
+    background:#00ff99;
+}
+
+.info-box{
+    margin-top:25px;
+    padding:20px;
+    background:#111827;
+    border:1px solid #263241;
+    border-radius:12px;
+}
+
+.info-box h3{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+.long-text{
+    word-break:break-all;
+    overflow-wrap:anywhere;
 }
 
 footer{
@@ -63,6 +125,7 @@ footer{
     padding:25px;
     background:#070b10;
     color:#aaaaaa;
+    font-size:14px;
 }
 </style>
 </head>
@@ -72,6 +135,12 @@ footer{
 <header class="hero">
     <img src="portada.png" alt="KIM Software Solutions - Soporte remoto y soluciones de TI">
 </header>
+
+<section style="text-align:center; padding:20px;">
+    <strong>Idioma:</strong>
+    <a href="index.html">🇧🇷 Português</a> |
+    🇪🇸 Español
+</section>
 
 <section>
     <h2 class="section-title">Servicios</h2>
@@ -135,7 +204,7 @@ footer{
             <h3>Soporte Remoto</h3>
             <p>Descarga RustDesk para permitir atención remota autorizada.</p>
             <br>
-            <a href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
+            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
                 Descargar RustDesk
             </a>
         </div>
@@ -144,7 +213,7 @@ footer{
             <h3>Mensajes Privados</h3>
             <p>Usa Session Messenger para comunicación privada.</p>
             <br>
-            <a href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
+            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
                 Descargar Session
             </a>
         </div>
@@ -153,7 +222,7 @@ footer{
             <h3>Programas Recomendados</h3>
             <p>Herramientas útiles para mantenimiento, seguridad y productividad.</p>
             <br>
-            <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
+            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
                 Firefox
             </a>
         </div>
@@ -166,13 +235,9 @@ footer{
     <div class="contact-box">
         <p><strong>Cómo solicitar soporte:</strong></p>
         <p>
-            Contáctame por correo electrónico, explica el problema
+            Contáctame por correo electrónico o por Session, explica el problema
             y espera el análisis inicial.
         </p>
-
-        <br>
-
-        
 
         <br>
 
@@ -183,25 +248,45 @@ footer{
             </a>
         </p>
 
-        <br>
+        <div class="info-box">
+            <h3>Mensajería Privada - Session</h3>
+            <p>
+                Para comunicación privada, también puedes contactarme por Session Messenger.
+            </p>
+            <br>
+            <p><strong>Session ID:</strong></p>
+            <p class="long-text">
+                05597befe572f75acf0ad0a8e6f6de0787ba324453766229c53cf2d02fef03c27c
+            </p>
+        </div>
 
-        <p><strong>Pago internacional:</strong></p>
-        <p>
-            PayPal disponible para clientes fuera de Brasil.
-            Los datos de pago serán enviados después del análisis del servicio.
-        </p>
+        <div class="info-box">
+            <h3>Pago</h3>
 
-        <br>
+            <p><strong>PayPal:</strong></p>
+            <p>
+                Para clientes internacionales, el pago puede realizarse vía PayPal:
+            </p>
+            <p>
+                <a href="mailto:kimsoftwaresolutions@gmail.com">
+                    kimsoftwaresolutions@gmail.com
+                </a>
+            </p>
 
-        <p>
-            El soporte remoto será iniciado después de la confirmación del pago.
-        </p>
+            <br>
 
-        <br>
+            <p><strong>PIX:</strong></p>
+            <p>
+                Para clientes en Brasil, también está disponible el pago vía PIX.
+                La clave PIX será enviada después del análisis del servicio.
+            </p>
 
-        <p>
-            <a href="index.html">Ver versión en portugués</a>
-        </p>
+            <br>
+
+            <p>
+                El soporte remoto será iniciado después de la confirmación del pago.
+            </p>
+        </div>
     </div>
 </section>
 
