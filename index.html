@@ -70,9 +70,20 @@ section{
 .contact-box{
     background:#161b22;
     display:inline-block;
+    max-width:760px;
+    width:100%;
     padding:30px;
     border-radius:12px;
     border:1px solid #263241;
+}
+
+a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#00d4ff;
 }
 
 .btn{
@@ -80,10 +91,33 @@ section{
     margin-top:20px;
     padding:14px 28px;
     background:#00d4ff;
-    color:#000;
+    color:#000000;
     text-decoration:none;
     border-radius:8px;
     font-weight:bold;
+}
+
+.btn:hover{
+    color:#000000;
+    background:#00ff99;
+}
+
+.info-box{
+    margin-top:25px;
+    padding:20px;
+    background:#111827;
+    border:1px solid #263241;
+    border-radius:12px;
+}
+
+.info-box h3{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+.long-text{
+    word-break:break-all;
+    overflow-wrap:anywhere;
 }
 
 footer{
@@ -162,7 +196,6 @@ footer{
     </div>
 </section>
 
-
 <section id="clientes">
     <h2 class="section-title">Área do Cliente</h2>
 
@@ -202,12 +235,9 @@ footer{
     <div class="contact-box">
         <p><strong>Como solicitar suporte:</strong></p>
         <p>
-            Entre em contato pelo e-mail, explique o problema e aguarde a análise inicial.
+            Entre em contato pelo e-mail ou pelo Session, explique o problema
+            e aguarde a análise inicial.
         </p>
-
-        <br>
-
-     
 
         <br>
 
@@ -218,19 +248,45 @@ footer{
             </a>
         </p>
 
-        <br>
+        <div class="info-box">
+            <h3>Mensagens Privadas - Session</h3>
+            <p>
+                Para comunicação privada, você também pode entrar em contato pelo Session Messenger.
+            </p>
+            <br>
+            <p><strong>Session ID:</strong></p>
+            <p class="long-text">
+                05597befe572f75acf0ad0a8e6f6de0787ba324453766229c53cf2d02fef03c27c
+            </p>
+        </div>
 
-        <p><strong>Pagamento via PIX:</strong></p>
-        <p>
-            Após a análise do serviço, o valor será informado ao cliente.
-            A chave PIX será enviada somente depois da confirmação do atendimento.
-        </p>
+        <div class="info-box">
+            <h3>Pagamento</h3>
 
-        <br>
+            <p><strong>PIX:</strong></p>
+            <p>
+                Após a análise do serviço, o valor será informado ao cliente.
+                A chave PIX será enviada somente depois da confirmação do atendimento.
+            </p>
 
-        <p>
-            O suporte remoto será iniciado após a confirmação do pagamento.
-        </p>
+            <br>
+
+            <p><strong>PayPal:</strong></p>
+            <p>
+                Para clientes internacionais, o pagamento pode ser feito via PayPal:
+            </p>
+            <p>
+                <a href="mailto:kimsoftwaresolutions@gmail.com">
+                    kimsoftwaresolutions@gmail.com
+                </a>
+            </p>
+
+            <br>
+
+            <p>
+                O suporte remoto será iniciado após a confirmação do pagamento.
+            </p>
+        </div>
     </div>
 </section>
 
