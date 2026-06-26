@@ -3,202 +3,478 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayuda para Venezuela | KIM Software Solutions</title>
-<meta name="description" content="Página temporal de solidaridad para orientar ayuda a Venezuela tras el terremoto.">
+<title>Ayuda Venezuela | Kim Music Project</title>
+<meta name="description" content="Centro temporal de información humanitaria y campaña musical solidaria para apoyar a Venezuela.">
 
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:#0d1117;
+    background:#0b0f19;
     color:#fff;
     line-height:1.6;
 }
-header{
-    background:linear-gradient(135deg,#f7d116,#0033a0,#cf142b);
-    padding:70px 20px;
+a{color:inherit}
+.hero{
+    min-height:95vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
+    padding:40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.82)),
+        linear-gradient(135deg,#f7d116 0%,#f7d116 33%,#0033a0 33%,#0033a0 66%,#cf142b 66%);
 }
-header h1{
-    font-size:42px;
-    margin:0 0 15px;
-    color:#fff;
-    text-shadow:0 2px 6px #000;
+.hero-content{max-width:980px}
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.35);
+    padding:9px 16px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-weight:bold;
 }
-header p{
-    font-size:20px;
+h1{
+    font-size:52px;
+    margin:0 0 18px;
+    line-height:1.1;
+}
+.hero p{
+    font-size:21px;
     max-width:850px;
-    margin:auto;
-    text-shadow:0 2px 5px #000;
+    margin:0 auto 28px;
+}
+.langs button{
+    padding:10px 16px;
+    margin:5px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
 }
 section{
-    max-width:1000px;
+    max-width:1150px;
     margin:auto;
-    padding:45px 20px;
+    padding:48px 20px;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 .card{
-    background:#161b22;
-    border:1px solid #30363d;
-    border-radius:14px;
+    background:#111827;
+    border:1px solid #263244;
+    border-radius:18px;
     padding:25px;
-    margin-bottom:25px;
+    margin-bottom:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
 }
-h2{
+.card h2,.card h3{
     color:#58a6ff;
     margin-top:0;
 }
 .btn{
     display:inline-block;
-    background:#25d366;
-    color:#000;
-    padding:14px 22px;
-    border-radius:8px;
     text-decoration:none;
+    padding:14px 22px;
+    border-radius:10px;
     font-weight:bold;
     margin:8px 8px 8px 0;
+    color:#000;
+    background:#25d366;
 }
-.btn-blue{
-    background:#58a6ff;
-}
-.btn-red{
-    background:#ff6b6b;
-}
-ul{
-    padding-left:22px;
-}
+.btn-blue{background:#58a6ff}
+.btn-red{background:#ff6b6b}
+.btn-yellow{background:#f7d116}
 .warning{
     background:#2d2200;
     border-left:5px solid #f7d116;
     padding:18px;
-    border-radius:8px;
+    border-radius:10px;
+}
+.progress-box{
+    background:#0b1220;
+    border:1px solid #263244;
+    border-radius:12px;
+    padding:18px;
+    margin:18px 0;
+}
+.progress-bar{
+    width:100%;
+    background:#263244;
+    border-radius:50px;
+    overflow:hidden;
+    height:18px;
+}
+.progress-fill{
+    width:0%;
+    height:18px;
+    background:#f7d116;
+}
+.music-box{
+    background:linear-gradient(135deg,#1f2937,#111827);
+    border:1px solid #3b485c;
 }
 footer{
     text-align:center;
-    padding:30px 20px;
-    color:#8b949e;
-    border-top:1px solid #30363d;
+    color:#9ca3af;
+    padding:32px 20px;
+    border-top:1px solid #263244;
 }
-.small{
-    color:#c9d1d9;
+.hidden{display:none}
+ul{padding-left:22px}
+.small{font-size:14px;color:#cbd5e1}
+.notice{
     font-size:14px;
+    color:#d1d5db;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Ayuda para Venezuela</h1>
-    <p>
-        Página temporal de solidaridad tras el terremoto que afectó a Venezuela.
-        KIM Software Solutions pausa temporalmente su sitio comercial para ayudar a difundir información útil.
-    </p>
-</header>
+<div class="hero">
+    <div class="hero-content">
+        <div class="badge">🇻🇪 Kim Music Project · KIM Software Solutions</div>
+
+        <h1 data-es>Ayuda para Venezuela</h1>
+        <h1 data-pt class="hidden">Ajuda para a Venezuela</h1>
+        <h1 data-en class="hidden">Help for Venezuela</h1>
+
+        <p data-es>
+            Centro temporal de información humanitaria y campaña musical solidaria.
+            Descarga una canción original de pop rock por USD 1 o más y ayuda a Venezuela.
+        </p>
+        <p data-pt class="hidden">
+            Centro temporário de informação humanitária e campanha musical solidária.
+            Baixe uma música original de pop rock por USD 1 ou mais e ajude a Venezuela.
+        </p>
+        <p data-en class="hidden">
+            Temporary humanitarian information center and solidarity music campaign.
+            Download an original pop rock song for USD 1 or more and help Venezuela.
+        </p>
+
+        <div class="langs">
+            <button onclick="setLang('es')">Español</button>
+            <button onclick="setLang('pt')">Português</button>
+            <button onclick="setLang('en')">English</button>
+        </div>
+
+        <a class="btn btn-yellow" href="#musica">🎵 Descargar canción</a>
+        <a class="btn" href="https://wa.me/+5549999027726?text=Hola,%20quiero%20ayudar%20a%20Venezuela" target="_blank">WhatsApp</a>
+    </div>
+</div>
 
 <section>
 
-    <div class="card">
-        <h2>Mensaje de solidaridad</h2>
+<div class="card music-box" id="musica">
+    <h2 data-es>🎵 Una canción por Venezuela</h2>
+    <h2 data-pt class="hidden">🎵 Uma música pela Venezuela</h2>
+    <h2 data-en class="hidden">🎵 One song for Venezuela</h2>
+
+    <p data-es>
+        Esta canción original de pop rock pertenece a <strong>Kim Music Project</strong>.
+        Puedes descargarla por <strong>USD 1 o más</strong>. El 100% de los ingresos netos
+        será donado a ayuda humanitaria para Venezuela.
+    </p>
+    <p data-pt class="hidden">
+        Esta música original de pop rock pertence ao <strong>Kim Music Project</strong>.
+        Você pode baixá-la por <strong>USD 1 ou mais</strong>. 100% da receita líquida
+        será doada para ajuda humanitária à Venezuela.
+    </p>
+    <p data-en class="hidden">
+        This original pop rock song belongs to <strong>Kim Music Project</strong>.
+        You can download it for <strong>USD 1 or more</strong>. 100% of net proceeds
+        will be donated to humanitarian aid for Venezuela.
+    </p>
+
+    <a class="btn btn-yellow" href="kimmusicproject.bandcamp.com" target="_blank">Descargar por USD 1</a>
+    <a class="btn btn-blue" href="kimsolutions.com.br/transparencia.html" target="_blank">Ver comprobantes</a>
+
+    <div class="progress-box">
+        <strong data-es>Transparencia de la campaña</strong>
+        <strong data-pt class="hidden">Transparência da campanha</strong>
+        <strong data-en class="hidden">Campaign transparency</strong>
+
         <p>
-            Venezuela está atravesando una emergencia. Muchas familias pueden necesitar apoyo,
-            información, alimentos, agua, medicinas, transporte o ayuda para contactar a sus seres queridos.
+            <span data-es>Meta:</span><span data-pt class="hidden">Meta:</span><span data-en class="hidden">Goal:</span>
+            <strong>USD 500</strong><br>
+            <span data-es>Recaudado:</span><span data-pt class="hidden">Arrecadado:</span><span data-en class="hidden">Raised:</span>
+            <strong>USD 0</strong>
         </p>
-        <p>
-            Esta página busca conectar personas que desean ayudar con canales responsables y seguros.
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <p class="small" data-es>
+            Se publicarán actualizaciones, capturas de ventas, gastos de plataforma y comprobantes de donación.
+        </p>
+        <p class="small hidden" data-pt>
+            Serão publicadas atualizações, capturas das vendas, taxas da plataforma e comprovantes de doação.
+        </p>
+        <p class="small hidden" data-en>
+            Updates, sales screenshots, platform fees, and donation receipts will be published.
         </p>
     </div>
 
+    <p class="notice" data-es>
+        Nota: “ingresos netos” significa el dinero recibido después de comisiones de la plataforma y procesadores de pago.
+    </p>
+    <p class="notice hidden" data-pt>
+        Nota: “receita líquida” significa o dinheiro recebido após taxas da plataforma e processadores de pagamento.
+    </p>
+    <p class="notice hidden" data-en>
+        Note: “net proceeds” means the money received after platform and payment processing fees.
+    </p>
+</div>
+
+<div class="grid">
     <div class="card">
-        <h2>Quiero ayudar</h2>
-        <p>
-            Puedes colaborar compartiendo información verificada, ofreciendo apoyo logístico,
-            donando insumos o contactando organizaciones humanitarias reconocidas.
-        </p>
+        <h3 data-es>Quiero ayudar</h3>
+        <h3 data-pt class="hidden">Quero ajudar</h3>
+        <h3 data-en class="hidden">I want to help</h3>
 
-        <a class="btn" href="https://wa.me/TU_NUMERO_WHATSAPP?text=Hola,%20quiero%20ayudar%20a%20Venezuela" target="_blank">
-            Quiero ayudar por WhatsApp
-        </a>
+        <p data-es>Ofrece apoyo, comparte información verificada o compra la canción solidaria.</p>
+        <p data-pt class="hidden">Ofereça apoio, compartilhe informações verificadas ou compre a música solidária.</p>
+        <p data-en class="hidden">Offer support, share verified information, or buy the solidarity song.</p>
 
-        <a class="btn btn-blue" href="ENLACE_ORGANIZACION_1" target="_blank">
-            Organización verificada 1
-        </a>
-
-        <a class="btn btn-blue" href="ENLACE_ORGANIZACION_2" target="_blank">
-            Organización verificada 2
-        </a>
+        <a class="btn" href="https://wa.me/+5549999027726?text=Hola,%20quiero%20ayudar%20a%20Venezuela" target="_blank">WhatsApp</a>
     </div>
 
     <div class="card">
-        <h2>Necesidades urgentes</h2>
-        <ul>
-            <li>Agua potable.</li>
-            <li>Alimentos no perecederos.</li>
-            <li>Medicinas básicas y material de primeros auxilios.</li>
-            <li>Linternas, baterías y power banks.</li>
-            <li>Ropa limpia y mantas.</li>
-            <li>Artículos para bebés, niños y adultos mayores.</li>
-            <li>Apoyo para transporte y comunicación.</li>
-        </ul>
+        <h3 data-es>Necesito ayuda</h3>
+        <h3 data-pt class="hidden">Preciso de ajuda</h3>
+        <h3 data-en class="hidden">I need help</h3>
+
+        <p data-es>Escribe tu zona, necesidad urgente y contacto disponible.</p>
+        <p data-pt class="hidden">Informe sua região, necessidade urgente e contato disponível.</p>
+        <p data-en class="hidden">Send your area, urgent need, and available contact information.</p>
+
+        <a class="btn btn-red" href="https://wa.me/+5549999027726?text=Hola,%20necesito%20ayuda%20u%20orientación%20por%20la%20situación%20en%20Venezuela" target="_blank">Contactar</a>
     </div>
 
     <div class="card">
-        <h2>Necesito ayuda</h2>
-        <p>
-            Si tú o tu familia necesitan orientación, puedes escribir explicando:
-        </p>
-        <ul>
-            <li>Ciudad o zona afectada.</li>
-            <li>Tipo de ayuda necesaria.</li>
-            <li>Número de contacto.</li>
-            <li>Si hay personas heridas, niños o adultos mayores.</li>
-        </ul>
+        <h3 data-es>Comparte esta página</h3>
+        <h3 data-pt class="hidden">Compartilhe esta página</h3>
+        <h3 data-en class="hidden">Share this page</h3>
 
-        <a class="btn btn-red" href="https://wa.me/TU_NUMERO_WHATSAPP?text=Hola,%20necesito%20ayuda%20u%20orientación%20por%20la%20situación%20en%20Venezuela" target="_blank">
-            Necesito ayuda
-        </a>
+        <p data-es>Ayuda difundiendo enlaces verificados y evitando rumores.</p>
+        <p data-pt class="hidden">Ajude compartilhando links verificados e evitando boatos.</p>
+        <p data-en class="hidden">Help by sharing verified links and avoiding rumors.</p>
+
+        <a class="btn btn-blue" href="https://wa.me/?text=Ayuda%20para%20Venezuela:%20https://kimsolutions.com.br" target="_blank">Compartir</a>
     </div>
+</div>
 
-    <div class="card">
-        <h2>Transparencia</h2>
-        <div class="warning">
-            <p>
-                <strong>Importante:</strong> esta página no representa a ningún organismo oficial.
-                Su objetivo es orientar, conectar y difundir información solidaria.
-            </p>
-            <p>
-                No envíes dinero a cuentas desconocidas. Verifica siempre la identidad de cualquier persona,
-                fundación u organización antes de donar.
-            </p>
+<div class="card">
+    <h2 data-es>Necesidades urgentes</h2>
+    <h2 data-pt class="hidden">Necessidades urgentes</h2>
+    <h2 data-en class="hidden">Urgent needs</h2>
+
+    <ul data-es>
+        <li>Agua potable.</li>
+        <li>Alimentos no perecederos.</li>
+        <li>Medicinas y primeros auxilios.</li>
+        <li>Linternas, baterías y power banks.</li>
+        <li>Ropa limpia, mantas y artículos para niños.</li>
+        <li>Transporte, comunicación y difusión verificada.</li>
+    </ul>
+
+    <ul data-pt class="hidden">
+        <li>Água potável.</li>
+        <li>Alimentos não perecíveis.</li>
+        <li>Medicamentos e primeiros socorros.</li>
+        <li>Lanternas, baterias e power banks.</li>
+        <li>Roupas limpas, cobertores e itens infantis.</li>
+        <li>Transporte, comunicação e divulgação verificada.</li>
+    </ul>
+
+    <ul data-en class="hidden">
+        <li>Drinking water.</li>
+        <li>Non-perishable food.</li>
+        <li>Medicines and first aid supplies.</li>
+        <li>Flashlights, batteries, and power banks.</li>
+        <li>Clean clothing, blankets, and children’s items.</li>
+        <li>Transport, communication, and verified information sharing.</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2 data-es>Centro de información humanitaria</h2>
+    <h2 data-pt class="hidden">Centro de informação humanitária</h2>
+    <h2 data-en class="hidden">Humanitarian information center</h2>
+
+    <p data-es>Enlaces verificados para seguir información, coordinar ayuda y evitar rumores.</p>
+    <p data-pt class="hidden">Links verificados para acompanhar informações, coordenar ajuda e evitar boatos.</p>
+    <p data-en class="hidden">Verified links to follow updates, coordinate support, and avoid misinformation.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>ReliefWeb / OCHA</h3>
+            <p data-es>Actualizaciones humanitarias sobre la emergencia.</p>
+            <p data-pt class="hidden">Atualizações humanitárias sobre a emergência.</p>
+            <p data-en class="hidden">Humanitarian updates about the emergency.</p>
+            <a class="btn btn-blue" href="https://reliefweb.int/country/ven" target="_blank">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>OCHA Venezuela</h3>
+            <p data-es>Coordinación humanitaria de Naciones Unidas.</p>
+            <p data-pt class="hidden">Coordenação humanitária das Nações Unidas.</p>
+            <p data-en class="hidden">United Nations humanitarian coordination.</p>
+            <a class="btn btn-blue" href="https://www.unocha.org/venezuela" target="_blank">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>UNICEF Venezuela</h3>
+            <p data-es>Apoyo a niños, familias, salud, agua y protección.</p>
+            <p data-pt class="hidden">Apoio a crianças, famílias, saúde, água e proteção.</p>
+            <p data-en class="hidden">Support for children, families, health, water, and protection.</p>
+            <a class="btn btn-blue" href="https://www.unicef.org/venezuela/en/unicefs-humanitarian-response-venezuela" target="_blank">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>Cruz Roja / IFRC</h3>
+            <p data-es>Red humanitaria internacional y Cruz Roja Venezolana.</p>
+            <p data-pt class="hidden">Rede humanitária internacional e Cruz Vermelha Venezuelana.</p>
+            <p data-en class="hidden">International humanitarian network and Venezuelan Red Cross.</p>
+            <a class="btn btn-blue" href="https://www.ifrc.org/national-societies-directory/venezuelan-red-cross" target="_blank">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>Protección Civil Venezuela</h3>
+            <p data-es>Organismo nacional de protección civil y desastres.</p>
+            <p data-pt class="hidden">Órgão nacional de proteção civil e desastres.</p>
+            <p data-en class="hidden">National civil protection and disaster agency.</p>
+            <a class="btn btn-blue" href="https://www.pcivil.gob.ve/" target="_blank">Abrir</a>
+        </div>
+
+        <div class="card">
+            <h3>USGS</h3>
+            <p data-es>Información técnica sobre sismos y réplicas.</p>
+            <p data-pt class="hidden">Informações técnicas sobre terremotos e réplicas.</p>
+            <p data-en class="hidden">Technical information on earthquakes and aftershocks.</p>
+            <a class="btn btn-blue" href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank">Abrir</a>
         </div>
     </div>
+</div>
 
-    <div class="card">
-        <h2>Cómo evitar estafas</h2>
-        <ul>
-            <li>No compartas datos bancarios personales.</li>
-            <li>No dones a perfiles recién creados o sin historial.</li>
-            <li>Prioriza organizaciones conocidas y canales oficiales.</li>
-            <li>Pide comprobantes y confirma la información antes de reenviarla.</li>
-            <li>No difundas rumores ni imágenes sin verificar.</li>
-        </ul>
-    </div>
+<div class="card">
+    <h2 data-es>Números de emergencia</h2>
+    <h2 data-pt class="hidden">Números de emergência</h2>
+    <h2 data-en class="hidden">Emergency numbers</h2>
 
-    <div class="card">
-        <h2>Contacto</h2>
-        <p>
-            KIM Software Solutions mantiene esta página temporalmente como apoyo solidario.
+    <ul data-es>
+        <li><strong>Protección Civil Venezuela:</strong> 0800-7248451</li>
+        <li><strong>Emergencias generales:</strong> 911</li>
+        <li><strong>Emergencias / atención ciudadana:</strong> 171</li>
+    </ul>
+
+    <ul data-pt class="hidden">
+        <li><strong>Proteção Civil Venezuela:</strong> 0800-7248451</li>
+        <li><strong>Emergências gerais:</strong> 911</li>
+        <li><strong>Emergências / atendimento cidadão:</strong> 171</li>
+    </ul>
+
+    <ul data-en class="hidden">
+        <li><strong>Venezuela Civil Protection:</strong> 0800-7248451</li>
+        <li><strong>General emergencies:</strong> 911</li>
+        <li><strong>Emergency / citizen assistance:</strong> 171</li>
+    </ul>
+
+    <div class="warning">
+        <p data-es>
+            Verifica disponibilidad local. Si una línea no responde, intenta contactar bomberos,
+            hospitales, policía local, Protección Civil regional o familiares cercanos.
         </p>
-        <p class="small">
-            Sitio temporal activo durante la emergencia. Luego volveremos a nuestro sitio habitual de servicios técnicos.
+        <p data-pt class="hidden">
+            Verifique a disponibilidade local. Se uma linha não responder, tente contatar bombeiros,
+            hospitais, polícia local, Proteção Civil regional ou familiares próximos.
+        </p>
+        <p data-en class="hidden">
+            Verify local availability. If one line does not answer, try firefighters, hospitals,
+            local police, regional Civil Protection, or nearby relatives.
         </p>
     </div>
+</div>
+
+<div class="card">
+    <h2 data-es>Transparencia</h2>
+    <h2 data-pt class="hidden">Transparência</h2>
+    <h2 data-en class="hidden">Transparency</h2>
+
+    <div class="warning">
+        <p data-es>
+            Esta página no representa a ningún organismo oficial. Es una iniciativa solidaria independiente
+            de Kim Music Project / KIM Software Solutions para orientar ayuda, compartir fuentes verificadas
+            y recaudar fondos mediante una canción original.
+        </p>
+        <p data-pt class="hidden">
+            Esta página não representa nenhum órgão oficial. É uma iniciativa solidária independente
+            do Kim Music Project / KIM Software Solutions para orientar ajuda, compartilhar fontes verificadas
+            e arrecadar fundos por meio de uma música original.
+        </p>
+        <p data-en class="hidden">
+            This page does not represent any official institution. It is an independent solidarity initiative
+            by Kim Music Project / KIM Software Solutions to guide support, share verified sources,
+            and raise funds through an original song.
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h2 data-es>Evita estafas</h2>
+    <h2 data-pt class="hidden">Evite golpes</h2>
+    <h2 data-en class="hidden">Avoid scams</h2>
+
+    <ul data-es>
+        <li>No compartas datos bancarios personales.</li>
+        <li>No dones a perfiles recién creados o sin historial.</li>
+        <li>No difundas rumores sin verificar.</li>
+        <li>Prioriza canales oficiales y organizaciones conocidas.</li>
+        <li>Exige transparencia, comprobantes y reportes claros.</li>
+    </ul>
+
+    <ul data-pt class="hidden">
+        <li>Não compartilhe dados bancários pessoais.</li>
+        <li>Não doe para perfis recém-criados ou sem histórico.</li>
+        <li>Não divulgue boatos sem verificar.</li>
+        <li>Priorize canais oficiais e organizações conhecidas.</li>
+        <li>Exija transparência, comprovantes e relatórios claros.</li>
+    </ul>
+
+    <ul data-en class="hidden">
+        <li>Do not share personal banking information.</li>
+        <li>Do not donate to newly created profiles with no history.</li>
+        <li>Do not spread unverified rumors.</li>
+        <li>Prioritize official channels and known organizations.</li>
+        <li>Expect transparency, receipts, and clear reports.</li>
+    </ul>
+</div>
 
 </section>
 
 <footer>
-    KIM Software Solutions · Página temporal de ayuda solidaria
+    Kim Music Project · KIM Software Solutions · Página temporal solidaria por Venezuela
 </footer>
+
+<script>
+function setLang(lang){
+    document.querySelectorAll('[data-es],[data-pt],[data-en]').forEach(el=>{
+        el.classList.add('hidden');
+    });
+    document.querySelectorAll('[data-'+lang+']').forEach(el=>{
+        el.classList.remove('hidden');
+    });
+    document.documentElement.lang = lang;
+}
+</script>
 
 </body>
 </html>
