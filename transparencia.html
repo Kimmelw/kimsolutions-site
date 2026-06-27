@@ -48,9 +48,28 @@ button{
 .pix-box{
     background:#0b1220;
     border:1px solid #30363d;
-    padding:18px;
+    padding:22px;
+    border-radius:12px;
+    text-align:center;
+}
+.pix-key{
+    background:#111827;
+    border:1px solid #30363d;
+    padding:15px;
     border-radius:10px;
-    word-break:break-word;
+    font-size:18px;
+    font-weight:bold;
+    word-break:break-all;
+    margin:15px 0 20px;
+}
+.pix-img{
+    max-width:280px;
+    width:100%;
+    border-radius:12px;
+    background:#fff;
+    padding:10px;
+    margin:10px auto 20px;
+    display:block;
 }
 .warning{
     background:#2d2200;
@@ -131,38 +150,61 @@ This page periodically publishes the financial information of the solidarity cam
 </div>
 
 <div class="card">
-<h2 data-es>Apoyo vía PIX</h2>
-<h2 data-pt class="hidden">Apoio via PIX</h2>
-<h2 data-en class="hidden">Support via PIX</h2>
+<h2 data-es>💳 Apoyo vía PIX</h2>
+<h2 data-pt class="hidden">💳 Apoio via PIX</h2>
+<h2 data-en class="hidden">💳 Support via PIX</h2>
 
 <p data-es>
-Algunas personas solicitaron apoyar por PIX por facilidad. El PIX es opcional y será tratado con la misma transparencia que Bandcamp.
+Algunas personas solicitaron una opción más sencilla para colaborar desde Brasil.
+El PIX es completamente opcional y será tratado con la misma transparencia que las ventas de Bandcamp.
 </p>
+
 <p data-pt class="hidden">
-Algumas pessoas solicitaram apoio por PIX pela facilidade. O PIX é opcional e será tratado com a mesma transparência do Bandcamp.
+Algumas pessoas solicitaram uma forma mais simples de colaborar a partir do Brasil.
+O PIX é totalmente opcional e será tratado com a mesma transparência das vendas do Bandcamp.
 </p>
+
 <p data-en class="hidden">
-Some people requested PIX support for convenience. PIX is optional and will be handled with the same transparency as Bandcamp.
+Some people requested an easier way to contribute from Brazil.
+PIX is entirely optional and will be handled with the same transparency as Bandcamp sales.
 </p>
 
 <div class="pix-box">
-<p><strong>PIX:</strong> 3ba54fea-1b15-49cd-b505-eeaff75420dd</p>
-<p><strong>Beneficiário / Beneficiary:</strong> Kimmel Williams Rondon Hernandez</p>
-<p><strong>QR PIX:</strong> 00020126580014BR.GOV.BCB.PIX01363ba54fea-1b15-49cd-b505-eeaff75420dd5204000053039865802BR5925KIMMEL WILLIAMS RONDON HE6015SAO LOURENCO DO62070503***6304BA6F</p>
+
+<img src="pix_qr.png" alt="QR PIX SOS Venezuela" class="pix-img">
+
+<p data-es><strong>Escanea el código QR o utiliza la clave PIX:</strong></p>
+<p data-pt class="hidden"><strong>Escaneie o QR ou utilize a chave PIX:</strong></p>
+<p data-en class="hidden"><strong>Scan the QR code or use the PIX key:</strong></p>
+
+<div class="pix-key">
+3ba54fea-1b15-49cd-b505-eeaff75420dd
+</div>
+
+<p>
+<strong>Beneficiário / Beneficiary</strong><br>
+Kimmel Williams Rondon Hernandez
+</p>
+
 </div>
 
 <div class="warning">
 <p data-es>
-Importante: las contribuciones por PIX pueden aparecer vinculadas al nombre personal del responsable de la campaña.
-Todos los valores recibidos por PIX serán registrados aquí y destinados a la misma finalidad solidaria.
+Importante: las contribuciones por PIX pueden aparecer vinculadas al nombre personal del responsable de la campaña,
+ya que la clave PIX pertenece a una cuenta bancaria personal utilizada para administrar esta iniciativa solidaria.
+Todos los ingresos recibidos mediante PIX serán publicados y registrados en esta página de transparencia.
 </p>
+
 <p data-pt class="hidden">
-Importante: as contribuições por PIX podem aparecer vinculadas ao nome pessoal do responsável pela campanha.
-Todos os valores recebidos por PIX serão registrados aqui e destinados à mesma finalidade solidária.
+Importante: as contribuições via PIX podem aparecer vinculadas ao nome pessoal do responsável pela campanha,
+uma vez que a chave PIX pertence a uma conta bancária pessoal utilizada para administrar esta iniciativa solidária.
+Todos os valores recebidos via PIX serão publicados e registrados nesta página de transparência.
 </p>
+
 <p data-en class="hidden">
-Important: PIX contributions may appear linked to the personal name of the campaign organizer.
-All PIX amounts received will be recorded here and allocated to the same solidarity purpose.
+Important: PIX contributions may appear linked to the personal name of the campaign organizer,
+as the PIX key belongs to a personal bank account used to manage this solidarity initiative.
+All funds received through PIX will be publicly reported and recorded on this transparency page.
 </p>
 </div>
 </div>
@@ -255,15 +297,9 @@ All PIX amounts received will be recorded here and allocated to the same solidar
 <h2 data-pt class="hidden">Comprovantes</h2>
 <h2 data-en class="hidden">Receipts</h2>
 
-<p data-es>
-Los comprobantes de ventas, PIX y donaciones aparecerán aquí conforme la campaña avance.
-</p>
-<p data-pt class="hidden">
-Os comprovantes de vendas, PIX e doações aparecerão aqui conforme a campanha avançar.
-</p>
-<p data-en class="hidden">
-Sales, PIX, and donation receipts will appear here as the campaign progresses.
-</p>
+<p data-es>Los comprobantes de ventas, PIX y donaciones aparecerán aquí conforme la campaña avance.</p>
+<p data-pt class="hidden">Os comprovantes de vendas, PIX e doações aparecerão aqui conforme a campanha avançar.</p>
+<p data-en class="hidden">Sales, PIX, and donation receipts will appear here as the campaign progresses.</p>
 
 <p data-es><strong>Primer reporte:</strong> pendiente.</p>
 <p data-pt class="hidden"><strong>Primeiro relatório:</strong> pendente.</p>
@@ -292,10 +328,12 @@ Sales, PIX, and donation receipts will appear here as the campaign progresses.
 Esta iniciativa no representa a ningún organismo oficial. Es una campaña independiente.
 Los ingresos netos recibidos por Bandcamp y PIX serán reportados en esta página.
 </p>
+
 <p data-pt class="hidden">
 Esta iniciativa não representa nenhum órgão oficial. É uma campanha independente.
 A receita líquida recebida por Bandcamp e PIX será informada nesta página.
 </p>
+
 <p data-en class="hidden">
 This initiative does not represent any official institution. It is an independent campaign.
 Net proceeds received through Bandcamp and PIX will be reported on this page.
