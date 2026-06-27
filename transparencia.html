@@ -6,20 +6,17 @@
 <title>Transparencia - SOS Venezuela</title>
 
 <style>
+*{box-sizing:border-box}
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0d1117;
     color:#ffffff;
-    max-width:900px;
+    max-width:980px;
     margin:auto;
     padding:30px;
     line-height:1.7;
 }
-
-h1,h2{
-    color:#58a6ff;
-}
-
+h1,h2{color:#58a6ff}
 .card{
     background:#161b22;
     border:1px solid #30363d;
@@ -27,123 +24,256 @@ h1,h2{
     padding:25px;
     margin-bottom:25px;
 }
-
 table{
     width:100%;
     border-collapse:collapse;
+    margin-top:15px;
 }
-
 th,td{
     border:1px solid #30363d;
     padding:12px;
     text-align:left;
 }
-
-th{
-    background:#21262d;
+th{background:#21262d}
+a{color:#58a6ff}
+button{
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:4px;
 }
-
-a{
-    color:#58a6ff;
+.langs{text-align:right;margin-bottom:20px}
+.pix-box{
+    background:#0b1220;
+    border:1px solid #30363d;
+    padding:18px;
+    border-radius:10px;
+    word-break:break-word;
 }
-
+.warning{
+    background:#2d2200;
+    border-left:5px solid #f7d116;
+    padding:18px;
+    border-radius:10px;
+}
 footer{
     text-align:center;
     color:#8b949e;
     margin-top:40px;
 }
+.hidden{display:none}
 </style>
 </head>
 
 <body>
 
-<h1>🇻🇪 Transparencia - SOS Venezuela</h1>
+<div class="langs">
+    <button onclick="setLang('es')">Español</button>
+    <button onclick="setLang('pt')">Português</button>
+    <button onclick="setLang('en')">English</button>
+</div>
 
-<p>
-Esta página publica periódicamente la información financiera de la campaña
-solidaria realizada por <strong>Kim Music Project</strong> para apoyar
-iniciativas humanitarias destinadas a Venezuela.
+<h1 data-es>🇻🇪 Transparencia - SOS Venezuela</h1>
+<h1 data-pt class="hidden">🇻🇪 Transparência - SOS Venezuela</h1>
+<h1 data-en class="hidden">🇻🇪 Transparency - SOS Venezuela</h1>
+
+<p data-es>
+Esta página publica periódicamente la información financiera de la campaña solidaria realizada por
+<strong>Kim Music Project</strong> y <strong>KIM Software Solutions</strong> para apoyar iniciativas humanitarias destinadas a Venezuela.
+</p>
+
+<p data-pt class="hidden">
+Esta página publica periodicamente as informações financeiras da campanha solidária realizada pelo
+<strong>Kim Music Project</strong> e <strong>KIM Software Solutions</strong> para apoiar iniciativas humanitárias destinadas à Venezuela.
+</p>
+
+<p data-en class="hidden">
+This page periodically publishes the financial information of the solidarity campaign carried out by
+<strong>Kim Music Project</strong> and <strong>KIM Software Solutions</strong> to support humanitarian initiatives for Venezuela.
 </p>
 
 <div class="card">
-<h2>Información de la campaña</h2>
+<h2 data-es>Información de la campaña</h2>
+<h2 data-pt class="hidden">Informações da campanha</h2>
+<h2 data-en class="hidden">Campaign information</h2>
 
-<ul>
+<ul data-es>
 <li><strong>Campaña iniciada:</strong> 26/06/2026</li>
 <li><strong>Canción:</strong> SOS Venezuela</li>
 <li><strong>Artista:</strong> Kim Music Project</li>
 <li><strong>Precio mínimo:</strong> USD 1</li>
-<li><strong>Plataforma:</strong> Bandcamp</li>
+<li><strong>Meta inicial:</strong> USD 500</li>
+<li><strong>Plataforma musical:</strong> Bandcamp</li>
+<li><strong>Métodos de apoyo:</strong> Bandcamp y PIX opcional</li>
+</ul>
+
+<ul data-pt class="hidden">
+<li><strong>Campanha iniciada:</strong> 26/06/2026</li>
+<li><strong>Música:</strong> SOS Venezuela</li>
+<li><strong>Artista:</strong> Kim Music Project</li>
+<li><strong>Preço mínimo:</strong> USD 1</li>
+<li><strong>Meta inicial:</strong> USD 500</li>
+<li><strong>Plataforma musical:</strong> Bandcamp</li>
+<li><strong>Métodos de apoio:</strong> Bandcamp e PIX opcional</li>
+</ul>
+
+<ul data-en class="hidden">
+<li><strong>Campaign started:</strong> 26/06/2026</li>
+<li><strong>Song:</strong> SOS Venezuela</li>
+<li><strong>Artist:</strong> Kim Music Project</li>
+<li><strong>Minimum price:</strong> USD 1</li>
+<li><strong>Initial goal:</strong> USD 500</li>
+<li><strong>Music platform:</strong> Bandcamp</li>
+<li><strong>Support methods:</strong> Bandcamp and optional PIX</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>Estado actual</h2>
+<h2 data-es>Apoyo vía PIX</h2>
+<h2 data-pt class="hidden">Apoio via PIX</h2>
+<h2 data-en class="hidden">Support via PIX</h2>
+
+<p data-es>
+Algunas personas solicitaron apoyar por PIX por facilidad. El PIX es opcional y será tratado con la misma transparencia que Bandcamp.
+</p>
+<p data-pt class="hidden">
+Algumas pessoas solicitaram apoio por PIX pela facilidade. O PIX é opcional e será tratado com a mesma transparência do Bandcamp.
+</p>
+<p data-en class="hidden">
+Some people requested PIX support for convenience. PIX is optional and will be handled with the same transparency as Bandcamp.
+</p>
+
+<div class="pix-box">
+<p><strong>PIX:</strong> 3ba54fea-1b15-49cd-b505-eeaff75420dd</p>
+<p><strong>Beneficiário / Beneficiary:</strong> Kimmel Williams Rondon Hernandez</p>
+<p><strong>QR PIX:</strong> 00020126710014BR.GOV.BCB.PIX01363ba54fea-1b15-49cd-b505-eeaff75420dd0209Obrigado 52040000530398654045.005802BR5925KIMMEL WILLIAMS RONDON HE6015SAO LOURENCO DO62070503***63046893</p>
+</div>
+
+<div class="warning">
+<p data-es>
+Importante: las contribuciones por PIX pueden aparecer vinculadas al nombre personal del responsable de la campaña.
+Todos los valores recibidos por PIX serán registrados aquí y destinados a la misma finalidad solidaria.
+</p>
+<p data-pt class="hidden">
+Importante: as contribuições por PIX podem aparecer vinculadas ao nome pessoal do responsável pela campanha.
+Todos os valores recebidos por PIX serão registrados aqui e destinados à mesma finalidade solidária.
+</p>
+<p data-en class="hidden">
+Important: PIX contributions may appear linked to the personal name of the campaign organizer.
+All PIX amounts received will be recorded here and allocated to the same solidarity purpose.
+</p>
+</div>
+</div>
+
+<div class="card">
+<h2 data-es>Estado actual</h2>
+<h2 data-pt class="hidden">Estado atual</h2>
+<h2 data-en class="hidden">Current status</h2>
 
 <table>
 <tr>
-<th>Concepto</th>
-<th>Monto</th>
+<th data-es>Concepto</th>
+<th data-pt class="hidden">Conceito</th>
+<th data-en class="hidden">Concept</th>
+<th data-es>Monto</th>
+<th data-pt class="hidden">Valor</th>
+<th data-en class="hidden">Amount</th>
 </tr>
 
 <tr>
-<td>Total recaudado</td>
+<td data-es>Total recaudado por Bandcamp</td>
+<td data-pt class="hidden">Total arrecadado pelo Bandcamp</td>
+<td data-en class="hidden">Total raised through Bandcamp</td>
 <td>USD 0.00</td>
 </tr>
 
 <tr>
-<td>Comisiones de plataforma</td>
-<td>USD 0.00</td>
+<td data-es>Total recibido por PIX</td>
+<td data-pt class="hidden">Total recebido por PIX</td>
+<td data-en class="hidden">Total received through PIX</td>
+<td>R$ 0.00</td>
 </tr>
 
 <tr>
-<td>Total neto disponible para donar</td>
-<td>USD 0.00</td>
+<td data-es>Comisiones de plataforma / pagos</td>
+<td data-pt class="hidden">Taxas de plataforma / pagamentos</td>
+<td data-en class="hidden">Platform / payment fees</td>
+<td>USD 0.00 / R$ 0.00</td>
 </tr>
 
 <tr>
-<td>Total donado</td>
-<td>USD 0.00</td>
+<td data-es>Total neto disponible para donar</td>
+<td data-pt class="hidden">Total líquido disponível para doação</td>
+<td data-en class="hidden">Net total available for donation</td>
+<td>USD 0.00 / R$ 0.00</td>
 </tr>
 
+<tr>
+<td data-es>Total donado</td>
+<td data-pt class="hidden">Total doado</td>
+<td data-en class="hidden">Total donated</td>
+<td>USD 0.00 / R$ 0.00</td>
+</tr>
 </table>
 </div>
 
 <div class="card">
-<h2>Historial de donaciones</h2>
+<h2 data-es>Historial de donaciones</h2>
+<h2 data-pt class="hidden">Histórico de doações</h2>
+<h2 data-en class="hidden">Donation history</h2>
 
-<p>
-Todavía no se ha realizado la primera donación.
-</p>
+<p data-es>Todavía no se ha realizado la primera donación.</p>
+<p data-pt class="hidden">A primeira doação ainda não foi realizada.</p>
+<p data-en class="hidden">The first donation has not been made yet.</p>
 
-<p>
-Cuando se realicen donaciones se publicará:
-</p>
-
-<ul>
+<ul data-es>
 <li>Fecha.</li>
 <li>Organización beneficiaria.</li>
 <li>Monto donado.</li>
 <li>Comprobante correspondiente.</li>
 </ul>
 
+<ul data-pt class="hidden">
+<li>Data.</li>
+<li>Organização beneficiária.</li>
+<li>Valor doado.</li>
+<li>Comprovante correspondente.</li>
+</ul>
+
+<ul data-en class="hidden">
+<li>Date.</li>
+<li>Beneficiary organization.</li>
+<li>Amount donated.</li>
+<li>Corresponding receipt.</li>
+</ul>
 </div>
 
 <div class="card">
-<h2>Comprobantes</h2>
+<h2 data-es>Comprobantes</h2>
+<h2 data-pt class="hidden">Comprovantes</h2>
+<h2 data-en class="hidden">Receipts</h2>
 
-<p>
-Los comprobantes de ventas y donaciones aparecerán aquí conforme la campaña avance.
+<p data-es>
+Los comprobantes de ventas, PIX y donaciones aparecerán aquí conforme la campaña avance.
+</p>
+<p data-pt class="hidden">
+Os comprovantes de vendas, PIX e doações aparecerão aqui conforme a campanha avançar.
+</p>
+<p data-en class="hidden">
+Sales, PIX, and donation receipts will appear here as the campaign progresses.
 </p>
 
-<p>
-Primer reporte pendiente.
-</p>
-
+<p data-es><strong>Primer reporte:</strong> pendiente.</p>
+<p data-pt class="hidden"><strong>Primeiro relatório:</strong> pendente.</p>
+<p data-en class="hidden"><strong>First report:</strong> pending.</p>
 </div>
 
 <div class="card">
-<h2>Organizaciones previstas</h2>
+<h2 data-es>Organizaciones previstas</h2>
+<h2 data-pt class="hidden">Organizações previstas</h2>
+<h2 data-en class="hidden">Planned organizations</h2>
 
 <ul>
 <li>UNICEF Venezuela</li>
@@ -151,12 +281,42 @@ Primer reporte pendiente.
 <li>IFRC</li>
 <li>OCHA</li>
 </ul>
+</div>
 
+<div class="card">
+<h2 data-es>Compromiso de transparencia</h2>
+<h2 data-pt class="hidden">Compromisso de transparência</h2>
+<h2 data-en class="hidden">Transparency commitment</h2>
+
+<p data-es>
+Esta iniciativa no representa a ningún organismo oficial. Es una campaña independiente.
+Los ingresos netos recibidos por Bandcamp y PIX serán reportados en esta página.
+</p>
+<p data-pt class="hidden">
+Esta iniciativa não representa nenhum órgão oficial. É uma campanha independente.
+A receita líquida recebida por Bandcamp e PIX será informada nesta página.
+</p>
+<p data-en class="hidden">
+This initiative does not represent any official institution. It is an independent campaign.
+Net proceeds received through Bandcamp and PIX will be reported on this page.
+</p>
 </div>
 
 <footer>
 Kim Music Project · KIM Software Solutions · 2026
 </footer>
+
+<script>
+function setLang(lang){
+    document.querySelectorAll('[data-es],[data-pt],[data-en]').forEach(el=>{
+        el.classList.add('hidden');
+    });
+    document.querySelectorAll('[data-'+lang+']').forEach(el=>{
+        el.classList.remove('hidden');
+    });
+    document.documentElement.lang = lang;
+}
+</script>
 
 </body>
 </html>
