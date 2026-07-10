@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,7 +8,7 @@
 
 <meta
     name="description"
-    content="Suporte remoto para Windows, Linux e Android. Backup, segurança digital, manutenção de computadores, configuração de dispositivos móveis e recuperação de dados."
+    content="Suporte remoto para Windows, Linux e Android. Backup, segurança digital, manutenção, instalação de software e migração de dados."
 >
 
 <style>
@@ -19,6 +18,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0d1117;
@@ -26,9 +29,64 @@ body{
     line-height:1.6;
 }
 
+a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    position:relative;
+    background:#071019;
+}
+
 .hero img{
     width:100%;
     display:block;
+}
+
+.language-bar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:18px 15px;
+    background:#070b10;
+    border-bottom:1px solid #263241;
+}
+
+.language-button{
+    border:1px solid #00d4ff;
+    background:transparent;
+    color:#ffffff;
+    padding:9px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.language-button:hover,
+.language-button.active{
+    background:#00d4ff;
+    color:#000000;
+}
+
+.main-navigation{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:18px 15px;
+    background:#111827;
+    border-bottom:1px solid #263241;
+}
+
+.main-navigation a{
+    font-weight:bold;
 }
 
 section{
@@ -56,6 +114,8 @@ section{
     padding:25px;
     border-radius:12px;
     border:1px solid #263241;
+    display:flex;
+    flex-direction:column;
 }
 
 .card h3{
@@ -63,45 +123,19 @@ section{
     margin-bottom:10px;
 }
 
-.about{
-    background:#111827;
-    border-radius:12px;
-    padding:30px;
-    border:1px solid #263241;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact-box{
-    background:#161b22;
-    display:inline-block;
-    max-width:760px;
-    width:100%;
-    padding:30px;
-    border-radius:12px;
-    border:1px solid #263241;
-}
-
-a{
-    color:#ffffff;
-    text-decoration:none;
-}
-
-a:hover{
-    color:#00d4ff;
+.card p{
+    flex-grow:1;
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    padding:14px 28px;
+    padding:14px 25px;
     background:#00d4ff;
     color:#000000;
-    text-decoration:none;
     border-radius:8px;
     font-weight:bold;
+    text-align:center;
 }
 
 .btn:hover{
@@ -109,9 +143,27 @@ a:hover{
     background:#00ff99;
 }
 
+.about,
+.contact-box,
+.payment-box{
+    background:#161b22;
+    border:1px solid #263241;
+    border-radius:12px;
+    padding:30px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    max-width:780px;
+    margin:auto;
+}
+
 .info-box{
     margin-top:25px;
-    padding:20px;
+    padding:22px;
     background:#111827;
     border:1px solid #263241;
     border-radius:12px;
@@ -119,12 +171,17 @@ a:hover{
 
 .info-box h3{
     color:#00ff99;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .long-text{
     word-break:break-all;
     overflow-wrap:anywhere;
+}
+
+.back-home{
+    text-align:center;
+    padding:25px 15px 10px;
 }
 
 footer{
@@ -133,6 +190,14 @@ footer{
     background:#070b10;
     color:#aaaaaa;
     font-size:14px;
+}
+
+[data-lang]{
+    display:none;
+}
+
+[data-lang].active{
+    display:block;
 }
 
 @media(max-width:600px){
@@ -144,13 +209,17 @@ footer{
         font-size:27px;
     }
 
-    .contact-box{
+    .contact-box,
+    .about{
         padding:22px 16px;
     }
 
     .btn{
         width:100%;
-        text-align:center;
+    }
+
+    .main-navigation{
+        gap:12px;
     }
 }
 </style>
@@ -165,93 +234,92 @@ footer{
     >
 </header>
 
-<section style="text-align:center; padding:20px;">
-    <strong>Idioma:</strong>
-    🇧🇷 Português |
-    <a href="es.html">🇪🇸 Español</a>
-</section>
+<div class="language-bar">
+    <strong>Idioma / Language:</strong>
 
-<section>
+    <button class="language-button active" onclick="changeLanguage('pt', this)">
+        🇧🇷 Português
+    </button>
+
+    <button class="language-button" onclick="changeLanguage('es', this)">
+        🇪🇸 Español
+    </button>
+
+    <button class="language-button" onclick="changeLanguage('en', this)">
+        🇺🇸 English
+    </button>
+</div>
+
+<nav class="main-navigation">
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#clientes">Área do Cliente</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<!-- PORTUGUÊS -->
+
+<div data-lang="pt" class="active">
+
+<section id="servicos">
     <h2 class="section-title">Serviços</h2>
 
     <div class="services">
 
         <div class="card">
             <h3>Suporte Remoto</h3>
-            <p>
-                Atendimento online para resolver problemas técnicos
-                de forma rápida e segura.
-            </p>
+            <p>Atendimento online para resolver problemas técnicos de forma rápida e segura.</p>
         </div>
 
         <div class="card">
             <h3>Manutenção de Computadores</h3>
-            <p>
-                Otimização, limpeza de sistema, correção de erros
-                e melhoria de desempenho.
-            </p>
+            <p>Otimização, limpeza de sistema, correção de erros e melhoria de desempenho.</p>
         </div>
 
         <div class="card">
             <h3>Segurança Digital</h3>
-            <p>
-                Remoção de vírus, proteção de dados e orientação
-                para um uso mais seguro.
-            </p>
+            <p>Remoção de vírus, proteção de dados e orientação para uso mais seguro.</p>
         </div>
 
         <div class="card">
             <h3>Backup e Recuperação</h3>
-            <p>
-                Cópia, organização e recuperação básica
-                de arquivos importantes.
-            </p>
+            <p>Cópia, organização e recuperação básica de arquivos importantes.</p>
         </div>
 
         <div class="card">
             <h3>Instalação e Configuração</h3>
-            <p>
-                Instalação de softwares, navegadores, ferramentas,
-                periféricos e sistemas.
-            </p>
+            <p>Instalação de softwares, navegadores, periféricos e ferramentas.</p>
         </div>
 
         <div class="card">
             <h3>Windows e Linux</h3>
-            <p>
-                Suporte para usuários Windows e Linux,
-                incluindo migração e configuração inicial.
-            </p>
+            <p>Suporte, migração, configuração inicial e manutenção de sistemas.</p>
         </div>
 
         <div class="card">
-            <h3>Suporte para Dispositivos Móveis</h3>
-            <p>
-                Configuração, backup, restauração, migração de dados,
-                atualização do sistema, otimização e suporte remoto
-                para dispositivos Android.
-            </p>
+            <h3>Dispositivos Android</h3>
+            <p>Backup, restauração, migração de dados, atualização e otimização de dispositivos Android.</p>
         </div>
 
     </div>
 </section>
 
-<section>
+<section id="sobre">
     <h2 class="section-title">Sobre</h2>
 
     <div class="about">
         <p>
             A KIM Software Solutions oferece suporte técnico remoto,
             manutenção preventiva, segurança digital, backup de dados
-            e soluções para Windows, Linux e dispositivos Android.
+            e soluções para Windows, Linux e Android.
         </p>
 
         <br>
 
         <p>
             Nosso objetivo é ajudar pessoas e pequenos negócios
-            a manterem seus computadores e dispositivos móveis
-            funcionando com mais segurança, organização e eficiência.
+            a utilizarem seus equipamentos com mais segurança,
+            organização e eficiência.
         </p>
     </div>
 </section>
@@ -262,51 +330,26 @@ footer{
     <div class="services">
 
         <div class="card">
-            <h3>Suporte Remoto</h3>
-            <p>
-                Baixe o RustDesk para permitir atendimento remoto autorizado.
-            </p>
-
-            <a
-                class="btn"
-                href="https://rustdesk.com/download"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <h3>RustDesk</h3>
+            <p>Baixe o RustDesk para permitir atendimento remoto autorizado.</p>
+            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
                 Baixar RustDesk
             </a>
         </div>
 
         <div class="card">
-            <h3>Mensagens Privadas</h3>
-            <p>
-                Use o Session Messenger para comunicação privada.
-            </p>
-
-            <a
-                class="btn"
-                href="https://getsession.org/download"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <h3>Session Messenger</h3>
+            <p>Use o Session para comunicação privada durante o atendimento.</p>
+            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
                 Baixar Session
             </a>
         </div>
 
         <div class="card">
-            <h3>Programas Recomendados</h3>
-            <p>
-                Ferramentas úteis para manutenção,
-                segurança e produtividade.
-            </p>
-
-            <a
-                class="btn"
-                href="https://www.mozilla.org/firefox/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Firefox
+            <h3>Firefox</h3>
+            <p>Navegador recomendado para segurança, privacidade e produtividade.</p>
+            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
+                Baixar Firefox
             </a>
         </div>
 
@@ -317,36 +360,21 @@ footer{
     <h2 class="section-title">Pedido de Suporte e Pagamento</h2>
 
     <div class="contact-box">
-
         <p><strong>Como solicitar suporte:</strong></p>
-
         <p>
-            Entre em contato pelo e-mail ou pelo Session,
+            Entre em contato por e-mail ou pelo Session,
             explique o problema e aguarde a análise inicial.
         </p>
 
-        <br>
-
-        <p><strong>E-mail:</strong></p>
-
-        <p>
+        <div class="info-box">
+            <h3>E-mail</h3>
             <a href="mailto:kimsoftwaresolutions@gmail.com">
                 kimsoftwaresolutions@gmail.com
             </a>
-        </p>
+        </div>
 
         <div class="info-box">
-            <h3>Mensagens Privadas — Session</h3>
-
-            <p>
-                Para comunicação privada, você também pode
-                entrar em contato pelo Session Messenger.
-            </p>
-
-            <br>
-
-            <p><strong>Session ID:</strong></p>
-
+            <h3>Session ID</h3>
             <p class="long-text">
                 05597befe572f75acf0ad0a8e6f6de0787ba324453766229c53cf2d02fef03c27c
             </p>
@@ -354,45 +382,326 @@ footer{
 
         <div class="info-box">
             <h3>Pagamento</h3>
-
-            <p><strong>PIX:</strong></p>
-
-            <p>
-                Após a análise do serviço, o valor será informado ao cliente.
-                A chave PIX será enviada somente depois da confirmação
-                do atendimento.
-            </p>
-
+            <p><strong>PIX:</strong> disponível para clientes no Brasil.</p>
+            <p><strong>PayPal:</strong> disponível para clientes internacionais.</p>
             <br>
-
-            <p><strong>PayPal:</strong></p>
-
             <p>
-                Para clientes internacionais, o pagamento
-                pode ser feito via PayPal:
+                Os dados de pagamento serão enviados após a análise e aprovação do serviço.
             </p>
+        </div>
+    </div>
+</section>
 
-            <p>
-                <a href="mailto:kimsoftwaresolutions@gmail.com">
-                    kimsoftwaresolutions@gmail.com
-                </a>
-            </p>
+</div>
 
-            <br>
+<!-- ESPAÑOL -->
 
-            <p>
-                O suporte remoto será iniciado após
-                a confirmação do pagamento.
-            </p>
+<div data-lang="es">
+
+<section id="servicios-es">
+    <h2 class="section-title">Servicios</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Soporte Remoto</h3>
+            <p>Atención online para resolver problemas técnicos de forma rápida y segura.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mantenimiento de Computadoras</h3>
+            <p>Optimización, limpieza del sistema, corrección de errores y mejora del rendimiento.</p>
+        </div>
+
+        <div class="card">
+            <h3>Seguridad Digital</h3>
+            <p>Eliminación de virus, protección de datos y orientación para un uso más seguro.</p>
+        </div>
+
+        <div class="card">
+            <h3>Backup y Recuperación</h3>
+            <p>Copia, organización y recuperación básica de archivos importantes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Instalación y Configuración</h3>
+            <p>Instalación de programas, navegadores, periféricos y herramientas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Windows y Linux</h3>
+            <p>Soporte, migración, configuración inicial y mantenimiento de sistemas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Dispositivos Android</h3>
+            <p>Backup, restauración, migración de datos, actualización y optimización de dispositivos Android.</p>
         </div>
 
     </div>
 </section>
 
+<section>
+    <h2 class="section-title">Sobre Nosotros</h2>
+
+    <div class="about">
+        <p>
+            KIM Software Solutions ofrece soporte técnico remoto,
+            mantenimiento preventivo, seguridad digital, backup de datos
+            y soluciones para Windows, Linux y Android.
+        </p>
+
+        <br>
+
+        <p>
+            Nuestro objetivo es ayudar a personas y pequeños negocios
+            a utilizar sus equipos con mayor seguridad,
+            organización y eficiencia.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Área del Cliente</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>RustDesk</h3>
+            <p>Descarga RustDesk para permitir atención remota autorizada.</p>
+            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
+                Descargar RustDesk
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Session Messenger</h3>
+            <p>Usa Session para comunicación privada durante la atención.</p>
+            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
+                Descargar Session
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Firefox</h3>
+            <p>Navegador recomendado para seguridad, privacidad y productividad.</p>
+            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
+                Descargar Firefox
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2 class="section-title">Solicitud de Soporte y Pago</h2>
+
+    <div class="contact-box">
+        <p><strong>Cómo solicitar soporte:</strong></p>
+        <p>
+            Contacta por correo electrónico o mediante Session,
+            explica el problema y espera el análisis inicial.
+        </p>
+
+        <div class="info-box">
+            <h3>Correo electrónico</h3>
+            <a href="mailto:kimsoftwaresolutions@gmail.com">
+                kimsoftwaresolutions@gmail.com
+            </a>
+        </div>
+
+        <div class="info-box">
+            <h3>Session ID</h3>
+            <p class="long-text">
+                05597befe572f75acf0ad0a8e6f6de0787ba324453766229c53cf2d02fef03c27c
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>Pago</h3>
+            <p><strong>PIX:</strong> disponible para clientes en Brasil.</p>
+            <p><strong>PayPal:</strong> disponible para clientes internacionales.</p>
+            <br>
+            <p>
+                Los datos de pago serán enviados después del análisis y aprobación del servicio.
+            </p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- ENGLISH -->
+
+<div data-lang="en">
+
+<section id="services-en">
+    <h2 class="section-title">Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Remote Support</h3>
+            <p>Online assistance to solve technical problems quickly and securely.</p>
+        </div>
+
+        <div class="card">
+            <h3>Computer Maintenance</h3>
+            <p>System optimization, cleanup, troubleshooting and performance improvement.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Security</h3>
+            <p>Virus removal, data protection and guidance for safer technology use.</p>
+        </div>
+
+        <div class="card">
+            <h3>Backup and Recovery</h3>
+            <p>Backup, organization and basic recovery of important files.</p>
+        </div>
+
+        <div class="card">
+            <h3>Installation and Setup</h3>
+            <p>Installation of software, browsers, peripherals and productivity tools.</p>
+        </div>
+
+        <div class="card">
+            <h3>Windows and Linux</h3>
+            <p>Support, migration, initial setup and system maintenance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Android Devices</h3>
+            <p>Backup, restoration, data migration, system updates and Android optimization.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about">
+        <p>
+            KIM Software Solutions provides remote technical support,
+            preventive maintenance, digital security, data backup
+            and solutions for Windows, Linux and Android.
+        </p>
+
+        <br>
+
+        <p>
+            Our goal is to help individuals and small businesses
+            use their devices with greater security,
+            organization and efficiency.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Client Area</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>RustDesk</h3>
+            <p>Download RustDesk to allow authorized remote assistance.</p>
+            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
+                Download RustDesk
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Session Messenger</h3>
+            <p>Use Session for private communication during support.</p>
+            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
+                Download Session
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Firefox</h3>
+            <p>Recommended browser for security, privacy and productivity.</p>
+            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
+                Download Firefox
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2 class="section-title">Support Request and Payment</h2>
+
+    <div class="contact-box">
+        <p><strong>How to request support:</strong></p>
+        <p>
+            Contact us by email or through Session,
+            explain the problem and wait for the initial assessment.
+        </p>
+
+        <div class="info-box">
+            <h3>Email</h3>
+            <a href="mailto:kimsoftwaresolutions@gmail.com">
+                kimsoftwaresolutions@gmail.com
+            </a>
+        </div>
+
+        <div class="info-box">
+            <h3>Session ID</h3>
+            <p class="long-text">
+                05597befe572f75acf0ad0a8e6f6de0787ba324453766229c53cf2d02fef03c27c
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>Payment</h3>
+            <p><strong>PIX:</strong> available for customers in Brazil.</p>
+            <p><strong>PayPal:</strong> available for international customers.</p>
+            <br>
+            <p>
+                Payment details will be sent after the service has been reviewed and approved.
+            </p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<div class="back-home">
+    <a class="btn" href="index.html">
+        Voltar ao início / Volver al inicio / Back to home
+    </a>
+</div>
+
 <footer>
     © 2026 KIM Software Solutions. Todos os direitos reservados.
 </footer>
 
+<script>
+function changeLanguage(language, button){
+    const languageSections = document.querySelectorAll("[data-lang]");
+    const buttons = document.querySelectorAll(".language-button");
+
+    languageSections.forEach(section => {
+        section.classList.remove("active");
+    });
+
+    buttons.forEach(item => {
+        item.classList.remove("active");
+    });
+
+    document
+        .querySelector('[data-lang="' + language + '"]')
+        .classList.add("active");
+
+    button.classList.add("active");
+
+    document.documentElement.lang =
+        language === "pt" ? "pt-BR" :
+        language === "es" ? "es" : "en";
+}
+</script>
+
 </body>
 </html>
-```
