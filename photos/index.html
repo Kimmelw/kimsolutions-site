@@ -81,7 +81,7 @@
             position: fixed;
             z-index: 9999;
             inset: 0;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.96);
             align-items: center;
             justify-content: center;
             padding: 30px;
@@ -92,7 +92,7 @@
         }
 
         .lightbox img {
-            max-width: 95%;
+            max-width: 90%;
             max-height: 90vh;
             object-fit: contain;
         }
@@ -106,10 +106,58 @@
             color: #fff;
             cursor: pointer;
             line-height: 1;
+            z-index: 2;
         }
 
         .close:hover {
             color: #aaa;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            font-weight: 300;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 10px;
+                gap: 8px;
+            }
+
+            .prev,
+            .next {
+                font-size: 36px;
+                padding: 10px;
+            }
+
+            .close {
+                top: 15px;
+                right: 20px;
+                font-size: 36px;
+            }
         }
     </style>
 </head>
@@ -123,8 +171,18 @@
 
     <main class="gallery">
 
-        <div class="photo" onclick="openLightbox()">
-            <img src="images/IMG-20220822-WA0034.jpg" alt="Fotografía">
+        <div class="photo" onclick="openLightbox(0)">
+            <img
+                src="images/IMG-20220822-WA0034.jpg"
+                alt="Fotografía 1"
+            >
+        </div>
+
+        <div class="photo" onclick="openLightbox(1)">
+            <img
+                src="images/FB_IMG_1661210151519.jpg"
+                alt="Fotografía 2"
+            >
         </div>
 
     </main>
@@ -139,15 +197,29 @@
 
         <span class="close" onclick="closeLightbox()">&times;</span>
 
-        <img
-            src="images/IMG-20220822-WA0034.jpg"
-            alt="Fotografía ampliada"
-        >
+        <span class="prev" onclick="previousPhoto()">&#10094;</span>
+
+        <img id="lightboxImage" src="" alt="Fotografía ampliada">
+
+        <span class="next" onclick="nextPhoto()">&#10095;</span>
 
     </div>
 
     <script>
-        function openLightbox() {
+
+        const photos = [
+            "images/IMG-20220822-WA0034.jpg",
+            "images/FB_IMG_1661210151519.jpg"
+        ];
+
+        let currentPhoto = 0;
+
+        function openLightbox(index) {
+            currentPhoto = index;
+
+            document.getElementById("lightboxImage").src =
+                photos[currentPhoto];
+
             document.getElementById("lightbox").classList.add("active");
         }
 
@@ -155,11 +227,44 @@
             document.getElementById("lightbox").classList.remove("active");
         }
 
+        function previousPhoto() {
+            currentPhoto--;
+
+            if (currentPhoto < 0) {
+                currentPhoto = photos.length - 1;
+            }
+
+            document.getElementById("lightboxImage").src =
+                photos[currentPhoto];
+        }
+
+        function nextPhoto() {
+            currentPhoto++;
+
+            if (currentPhoto >= photos.length) {
+                currentPhoto = 0;
+            }
+
+            document.getElementById("lightboxImage").src =
+                photos[currentPhoto];
+        }
+
         document.addEventListener("keydown", function(event) {
+
             if (event.key === "Escape") {
                 closeLightbox();
             }
+
+            if (event.key === "ArrowLeft") {
+                previousPhoto();
+            }
+
+            if (event.key === "ArrowRight") {
+                nextPhoto();
+            }
+
         });
+
     </script>
 
 </body>
