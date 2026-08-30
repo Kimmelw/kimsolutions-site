@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>KIM Photos</title>
 
     <style>
@@ -18,8 +19,10 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* ENCABEZADO */
+
         header {
-            padding: 30px 20px;
+            padding: 30px 20px 20px;
             text-align: center;
             border-bottom: 1px solid #333;
         }
@@ -31,10 +34,45 @@
         }
 
         header p {
-            margin: 8px 0 0;
+            margin: 8px 0 20px;
             color: #999;
             font-size: 14px;
         }
+
+        /* NAVEGACIÓN DE DÉCADAS */
+
+        .decades {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .decade-button {
+            border: 1px solid #444;
+            background: #1b1b1b;
+            color: #ccc;
+            padding: 9px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .decade-button:hover {
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        .decade-button.active {
+            background: #fff;
+            color: #111;
+            border-color: #fff;
+        }
+
+        /* GALERÍA */
 
         .gallery {
             width: 100%;
@@ -67,6 +105,22 @@
             transform: scale(1.05);
         }
 
+        /* MENSAJE CUANDO NO HAY FOTOS */
+
+        .empty-message {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .empty-message.active {
+            display: block;
+        }
+
+        /* PIE */
+
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -97,6 +151,8 @@
             object-fit: contain;
         }
 
+        /* CERRAR */
+
         .close {
             position: absolute;
             top: 20px;
@@ -112,6 +168,8 @@
         .close:hover {
             color: #aaa;
         }
+
+        /* ANTERIOR / SIGUIENTE */
 
         .prev,
         .next {
@@ -140,7 +198,28 @@
             color: #aaa;
         }
 
+        /* MÓVIL */
+
         @media (max-width: 600px) {
+
+            header {
+                padding: 25px 15px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .decades {
+                gap: 6px;
+                padding: 12px 10px;
+            }
+
+            .decade-button {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
                 padding: 10px;
@@ -164,21 +243,90 @@
 
 <body>
 
+    <!-- ENCABEZADO -->
+
     <header>
+
         <h1>KIM Photos</h1>
-        <p>Personal photo collection · 2020s</p>
+
+        <p id="albumTitle">
+            Personal photo collection · 2020s
+        </p>
+
     </header>
 
-    <main class="gallery">
 
-        <div class="photo" onclick="openLightbox(0)">
+    <!-- DÉCADAS -->
+
+    <nav class="decades">
+
+        <button
+            class="decade-button"
+            onclick="showDecade('all', this)"
+        >
+            TODAS
+        </button>
+
+        <button
+            class="decade-button"
+            onclick="showDecade('1980s', this)"
+        >
+            1980s
+        </button>
+
+        <button
+            class="decade-button"
+            onclick="showDecade('1990s', this)"
+        >
+            1990s
+        </button>
+
+        <button
+            class="decade-button"
+            onclick="showDecade('2000s', this)"
+        >
+            2000s
+        </button>
+
+        <button
+            class="decade-button"
+            onclick="showDecade('2010s', this)"
+        >
+            2010s
+        </button>
+
+        <button
+            class="decade-button active"
+            onclick="showDecade('2020s', this)"
+        >
+            2020s
+        </button>
+
+    </nav>
+
+
+    <!-- GALERÍA -->
+
+    <main class="gallery" id="gallery">
+
+        <!-- 2020s -->
+
+        <div
+            class="photo"
+            data-decade="2020s"
+            onclick="openLightbox(0)"
+        >
             <img
                 src="images/2020s/IMG-20220822-WA0034.jpg"
                 alt="Fotografía 1"
             >
         </div>
 
-        <div class="photo" onclick="openLightbox(1)">
+        <div
+            class="photo"
+            data-decade="2020s"
+            onclick="openLightbox(1)"
+        >
             <img
                 src="images/2020s/FB_IMG_1661210151519.jpg"
                 alt="Fotografía 2"
@@ -187,83 +335,326 @@
 
     </main>
 
+
+    <!-- MENSAJE SIN FOTOS -->
+
+    <div
+        class="empty-message"
+        id="emptyMessage"
+    >
+        No hay fotografías en esta década todavía.
+    </div>
+
+
+    <!-- PIE -->
+
     <footer>
         © KIM Solutions
     </footer>
 
+
     <!-- VISOR -->
 
-    <div class="lightbox" id="lightbox">
+    <div
+        class="lightbox"
+        id="lightbox"
+    >
 
-        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span
+            class="close"
+            onclick="closeLightbox()"
+        >
+            &times;
+        </span>
 
-        <span class="prev" onclick="previousPhoto()">&#10094;</span>
+        <span
+            class="prev"
+            onclick="previousPhoto()"
+        >
+            &#10094;
+        </span>
 
-        <img id="lightboxImage" src="" alt="Fotografía ampliada">
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Fotografía ampliada"
+        >
 
-        <span class="next" onclick="nextPhoto()">&#10095;</span>
+        <span
+            class="next"
+            onclick="nextPhoto()"
+        >
+            &#10095;
+        </span>
 
     </div>
 
+
     <script>
 
+        /*
+         * FOTOGRAFÍAS
+         */
+
         const photos = [
-            "images/2020s/IMG-20220822-WA0034.jpg",
-            "images/2020s/FB_IMG_1661210151519.jpg"
+
+            {
+                src: "images/2020s/IMG-20220822-WA0034.jpg",
+                decade: "2020s"
+            },
+
+            {
+                src: "images/2020s/FB_IMG_1661210151519.jpg",
+                decade: "2020s"
+            }
+
         ];
+
 
         let currentPhoto = 0;
 
+        let visiblePhotos = photos;
+
+
+        /*
+         * MOSTRAR DÉCADA
+         */
+
+        function showDecade(decade, button) {
+
+            const photoElements =
+                document.querySelectorAll(".photo");
+
+            visiblePhotos = [];
+
+            photoElements.forEach(function(photoElement, index) {
+
+                const photoDecade =
+                    photoElement.dataset.decade;
+
+                if (
+                    decade === "all" ||
+                    photoDecade === decade
+                ) {
+
+                    photoElement.style.display = "block";
+
+                    visiblePhotos.push(
+                        photos[index]
+                    );
+
+                } else {
+
+                    photoElement.style.display = "none";
+
+                }
+
+            });
+
+
+            /*
+             * BOTÓN ACTIVO
+             */
+
+            document
+                .querySelectorAll(".decade-button")
+                .forEach(function(buttonElement) {
+
+                    buttonElement.classList.remove("active");
+
+                });
+
+            button.classList.add("active");
+
+
+            /*
+             * TÍTULO
+             */
+
+            const albumTitle =
+                document.getElementById("albumTitle");
+
+            if (decade === "all") {
+
+                albumTitle.textContent =
+                    "Personal photo collection · Todas";
+
+            } else {
+
+                albumTitle.textContent =
+                    "Personal photo collection · " + decade;
+
+            }
+
+
+            /*
+             * MENSAJE SI NO HAY FOTOS
+             */
+
+            const emptyMessage =
+                document.getElementById("emptyMessage");
+
+            if (visiblePhotos.length === 0) {
+
+                emptyMessage.classList.add("active");
+
+            } else {
+
+                emptyMessage.classList.remove("active");
+
+            }
+
+        }
+
+
+        /*
+         * ABRIR VISOR
+         */
+
         function openLightbox(index) {
-            currentPhoto = index;
+
+            const selectedPhoto =
+                document.querySelectorAll(".photo")[index];
+
+            const allPhotoElements =
+                Array.from(
+                    document.querySelectorAll(".photo")
+                );
+
+            const visibleElements =
+                allPhotoElements.filter(function(element) {
+
+                    return element.style.display !== "none";
+
+                });
+
+            const realIndex =
+                visibleElements.indexOf(selectedPhoto);
+
+            currentPhoto = realIndex;
 
             document.getElementById("lightboxImage").src =
-                photos[currentPhoto];
+                visiblePhotos[currentPhoto].src;
 
-            document.getElementById("lightbox").classList.add("active");
+            document
+                .getElementById("lightbox")
+                .classList.add("active");
+
         }
+
+
+        /*
+         * CERRAR VISOR
+         */
 
         function closeLightbox() {
-            document.getElementById("lightbox").classList.remove("active");
+
+            document
+                .getElementById("lightbox")
+                .classList.remove("active");
+
         }
 
+
+        /*
+         * FOTO ANTERIOR
+         */
+
         function previousPhoto() {
+
+            if (visiblePhotos.length === 0) {
+                return;
+            }
+
             currentPhoto--;
 
             if (currentPhoto < 0) {
-                currentPhoto = photos.length - 1;
+
+                currentPhoto =
+                    visiblePhotos.length - 1;
+
             }
 
             document.getElementById("lightboxImage").src =
-                photos[currentPhoto];
+                visiblePhotos[currentPhoto].src;
+
         }
+
+
+        /*
+         * FOTO SIGUIENTE
+         */
 
         function nextPhoto() {
+
+            if (visiblePhotos.length === 0) {
+                return;
+            }
+
             currentPhoto++;
 
-            if (currentPhoto >= photos.length) {
+            if (currentPhoto >= visiblePhotos.length) {
+
                 currentPhoto = 0;
+
             }
 
             document.getElementById("lightboxImage").src =
-                photos[currentPhoto];
+                visiblePhotos[currentPhoto].src;
+
         }
 
-        document.addEventListener("keydown", function(event) {
 
-            if (event.key === "Escape") {
-                closeLightbox();
+        /*
+         * TECLADO
+         */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    closeLightbox();
+
+                }
+
+                if (event.key === "ArrowLeft") {
+
+                    previousPhoto();
+
+                }
+
+                if (event.key === "ArrowRight") {
+
+                    nextPhoto();
+
+                }
+
             }
+        );
 
-            if (event.key === "ArrowLeft") {
-                previousPhoto();
+
+        /*
+         * INICIAR EN 2020s
+         */
+
+        window.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                const defaultButton =
+                    document.querySelector(
+                        ".decade-button.active"
+                    );
+
+                showDecade(
+                    "2020s",
+                    defaultButton
+                );
+
             }
-
-            if (event.key === "ArrowRight") {
-                nextPhoto();
-            }
-
-        });
+        );
 
     </script>
 
