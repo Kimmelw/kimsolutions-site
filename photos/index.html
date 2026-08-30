@@ -52,6 +52,7 @@
             aspect-ratio: 1 / 1;
             background: #222;
             border-radius: 4px;
+            cursor: pointer;
         }
 
         .photo img {
@@ -72,6 +73,44 @@
             color: #666;
             font-size: 13px;
         }
+
+        /* VISOR */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 42px;
+            font-weight: 300;
+            color: #fff;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            color: #aaa;
+        }
     </style>
 </head>
 
@@ -84,7 +123,7 @@
 
     <main class="gallery">
 
-        <div class="photo">
+        <div class="photo" onclick="openLightbox()">
             <img src="images/IMG-20220822-WA0034.jpg" alt="Fotografía">
         </div>
 
@@ -94,7 +133,35 @@
         © KIM Solutions
     </footer>
 
+    <!-- VISOR -->
+
+    <div class="lightbox" id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <img
+            src="images/IMG-20220822-WA0034.jpg"
+            alt="Fotografía ampliada"
+        >
+
+    </div>
+
+    <script>
+        function openLightbox() {
+            document.getElementById("lightbox").classList.add("active");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.remove("active");
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+
 </body>
 </html>
 ```
-
