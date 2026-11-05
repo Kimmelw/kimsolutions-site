@@ -3,705 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Suporte remoto para Windows, Linux e Android. Backup, segurança digital, manutenção, instalação de software e migração de dados.">
+<meta name="theme-color" content="#0d1117">
 <title>KIM Software Solutions</title>
-
-<meta
-    name="description"
-    content="Suporte remoto para Windows, Linux e Android. Backup, segurança digital, manutenção, instalação de software e migração de dados."
->
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0d1117;
-    color:#ffffff;
-    line-height:1.6;
-}
-
-a{
-    color:#ffffff;
-    text-decoration:none;
-}
-
-a:hover{
-    color:#00d4ff;
-}
-
-.hero{
-    position:relative;
-    background:#071019;
-}
-
-.hero img{
-    width:100%;
-    display:block;
-}
-
-.language-bar{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-    padding:18px 15px;
-    background:#070b10;
-    border-bottom:1px solid #263241;
-}
-
-.language-button{
-    border:1px solid #00d4ff;
-    background:transparent;
-    color:#ffffff;
-    padding:9px 15px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.language-button:hover,
-.language-button.active{
-    background:#00d4ff;
-    color:#000000;
-}
-
-.main-navigation{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    padding:18px 15px;
-    background:#111827;
-    border-bottom:1px solid #263241;
-}
-
-.main-navigation a{
-    font-weight:bold;
-}
-
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:55px 20px;
-}
-
-.section-title{
-    text-align:center;
-    color:#00d4ff;
-    font-size:32px;
-    margin-bottom:35px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-    gap:20px;
-    align-items:stretch;
-}
-
-.card{
-    background:#161b22;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid #263241;
-    display:flex;
-    flex-direction:column;
-}
-
-.card h3{
-    color:#00ff99;
-    margin-bottom:10px;
-}
-
-.card p{
-    flex-grow:1;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 25px;
-    background:#00d4ff;
-    color:#000000;
-    border-radius:8px;
-    font-weight:bold;
-    text-align:center;
-}
-
-.btn:hover{
-    color:#000000;
-    background:#00ff99;
-}
-
-.about,
-.contact-box,
-.payment-box{
-    background:#161b22;
-    border:1px solid #263241;
-    border-radius:12px;
-    padding:30px;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact-box{
-    max-width:780px;
-    margin:auto;
-}
-
-.info-box{
-    margin-top:25px;
-    padding:22px;
-    background:#111827;
-    border:1px solid #263241;
-    border-radius:12px;
-}
-
-.info-box h3{
-    color:#00ff99;
-    margin-bottom:12px;
-}
-
-.long-text{
-    word-break:break-all;
-    overflow-wrap:anywhere;
-}
-
-.back-home{
-    text-align:center;
-    padding:25px 15px 10px;
-}
-
-footer{
-    text-align:center;
-    padding:25px;
-    background:#070b10;
-    color:#aaaaaa;
-    font-size:14px;
-}
-
-[data-lang]{
-    display:none;
-}
-
-[data-lang].active{
-    display:block;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{font-family:Arial,Helvetica,sans-serif;background:#0d1117;color:#fff;line-height:1.6}
+a{color:#fff;text-decoration:none}
+a:hover{color:#00d4ff}
+.hero{background:#071019}
+.hero img{width:100%;display:block}
+.language-bar{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;padding:18px 15px;background:#070b10;border-bottom:1px solid #263241}
+.language-bar strong{margin-right:5px}
+.language-button{border:1px solid #00d4ff;background:transparent;color:#fff;padding:9px 13px;border-radius:8px;cursor:pointer;font-weight:bold;font-size:14px}
+.language-button:hover,.language-button.active{background:#00d4ff;color:#000}
+.main-navigation{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:18px 15px;background:#111827;border-bottom:1px solid #263241}
+.main-navigation a{font-weight:bold}
+section{max-width:1100px;margin:auto;padding:55px 20px}
+.section-title{text-align:center;color:#00d4ff;font-size:32px;margin-bottom:35px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;align-items:stretch}
+.card{background:#161b22;padding:25px;border-radius:12px;border:1px solid #263241;display:flex;flex-direction:column}
+.card h3{color:#00ff99;margin-bottom:10px}
+.card p{flex-grow:1}
+.btn{display:inline-block;margin-top:20px;padding:14px 25px;background:#00d4ff;color:#000;border-radius:8px;font-weight:bold;text-align:center}
+.btn:hover{color:#000;background:#00ff99}
+.about,.contact-box{background:#161b22;border:1px solid #263241;border-radius:12px;padding:30px}
+.contact{text-align:center}
+.contact-box{max-width:780px;margin:auto}
+.info-box{margin-top:25px;padding:22px;background:#111827;border:1px solid #263241;border-radius:12px}
+.info-box h3{color:#00ff99;margin-bottom:12px}
+.long-text{word-break:break-all;overflow-wrap:anywhere}
+.back-home{text-align:center;padding:25px 15px 10px}
+footer{text-align:center;padding:25px;background:#070b10;color:#aaa;font-size:14px}
 @media(max-width:600px){
-    section{
-        padding:40px 15px;
-    }
-
-    .section-title{
-        font-size:27px;
-    }
-
-    .contact-box,
-    .about{
-        padding:22px 16px;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .main-navigation{
-        gap:12px;
-    }
+ section{padding:40px 15px}
+ .section-title{font-size:27px}
+ .contact-box,.about{padding:22px 16px}
+ .btn{width:100%}
+ .main-navigation{gap:12px}
+ .language-button{padding:8px 10px}
 }
 </style>
 </head>
-
 <body>
-
 <header class="hero">
-    <img
-        src="portada.png"
-        alt="KIM Software Solutions - Suporte remoto para Windows, Linux e Android"
-    >
+  <img src="portada.png" alt="KIM Software Solutions - suporte remoto para Windows, Linux e Android">
 </header>
 
-<div class="language-bar">
-    <strong>Idioma / Language:</strong>
-
-    <button class="language-button active" onclick="changeLanguage('pt', this)">
-        🇧🇷 Português
-    </button>
-
-    <button class="language-button" onclick="changeLanguage('es', this)">
-        🇪🇸 Español
-    </button>
-
-    <button class="language-button" onclick="changeLanguage('en', this)">
-        🇺🇸 English
-    </button>
+<div class="language-bar" aria-label="Language selector">
+  <strong id="language-label">Idioma / Language:</strong>
+  <button class="language-button" type="button" data-language="pt">🇧🇷 Português</button>
+  <button class="language-button" type="button" data-language="es">🇪🇸 Español</button>
+  <button class="language-button" type="button" data-language="en">🇬🇧 English</button>
+  <button class="language-button" type="button" data-language="ru">🇷🇺 Русский</button>
+  <button class="language-button" type="button" data-language="fr">🇫🇷 Français</button>
+  <button class="language-button" type="button" data-language="it">🇮🇹 Italiano</button>
+  <button class="language-button" type="button" data-language="ca">🏴 Català</button>
 </div>
 
-<nav class="main-navigation">
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#clientes">Área do Cliente</a>
-    <a href="#contato">Contato</a>
+<nav class="main-navigation" aria-label="Main navigation">
+  <a href="#services" data-i18n="navServices">Serviços</a>
+  <a href="#about" data-i18n="navAbout">Sobre</a>
+  <a href="#clients" data-i18n="navClients">Área do Cliente</a>
+  <a href="#contact" data-i18n="navContact">Contato</a>
 </nav>
 
-<!-- PORTUGUÊS -->
-
-<div data-lang="pt" class="active">
-
-<section id="servicos">
-    <h2 class="section-title">Serviços</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>Suporte Remoto</h3>
-            <p>Atendimento online para resolver problemas técnicos de forma rápida e segura.</p>
-        </div>
-
-        <div class="card">
-            <h3>Manutenção de Computadores</h3>
-            <p>Otimização, limpeza de sistema, correção de erros e melhoria de desempenho.</p>
-        </div>
-
-        <div class="card">
-            <h3>Segurança Digital</h3>
-            <p>Remoção de vírus, proteção de dados e orientação para uso mais seguro.</p>
-        </div>
-
-        <div class="card">
-            <h3>Backup e Recuperação</h3>
-            <p>Cópia, organização e recuperação básica de arquivos importantes.</p>
-        </div>
-
-        <div class="card">
-            <h3>Instalação e Configuração</h3>
-            <p>Instalação de softwares, navegadores, periféricos e ferramentas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Windows e Linux</h3>
-            <p>Suporte, migração, configuração inicial e manutenção de sistemas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Dispositivos Android</h3>
-            <p>Backup, restauração, migração de dados, atualização e otimização de dispositivos Android.</p>
-        </div>
-
-    </div>
+<main>
+<section id="services">
+  <h2 class="section-title" data-i18n="servicesTitle">Serviços</h2>
+  <div class="services">
+    <article class="card"><h3 data-i18n="remoteTitle">Suporte Remoto</h3><p data-i18n="remoteText">Atendimento online para resolver problemas técnicos de forma rápida e segura.</p></article>
+    <article class="card"><h3 data-i18n="maintenanceTitle">Manutenção de Computadores</h3><p data-i18n="maintenanceText">Otimização, limpeza de sistema, correção de erros e melhoria de desempenho.</p></article>
+    <article class="card"><h3 data-i18n="securityTitle">Segurança Digital</h3><p data-i18n="securityText">Remoção de vírus, proteção de dados e orientação para uso mais seguro.</p></article>
+    <article class="card"><h3 data-i18n="backupTitle">Backup e Recuperação</h3><p data-i18n="backupText">Cópia, organização e recuperação básica de arquivos importantes.</p></article>
+    <article class="card"><h3 data-i18n="installTitle">Instalação e Configuração</h3><p data-i18n="installText">Instalação de softwares, navegadores, periféricos e ferramentas.</p></article>
+    <article class="card"><h3 data-i18n="systemsTitle">Windows e Linux</h3><p data-i18n="systemsText">Suporte, migração, configuração inicial e manutenção de sistemas.</p></article>
+    <article class="card"><h3 data-i18n="androidTitle">Dispositivos Android</h3><p data-i18n="androidText">Backup, restauração, migração de dados, atualização e otimização de dispositivos Android.</p></article>
+  </div>
 </section>
 
-<section id="sobre">
-    <h2 class="section-title">Sobre</h2>
-
-    <div class="about">
-        <p>
-            A KIM Software Solutions oferece suporte técnico remoto,
-            manutenção preventiva, segurança digital, backup de dados
-            e soluções para Windows, Linux e Android.
-        </p>
-
-        <br>
-
-        <p>
-            Nosso objetivo é ajudar pessoas e pequenos negócios
-            a utilizarem seus equipamentos com mais segurança,
-            organização e eficiência.
-        </p>
-    </div>
+<section id="about">
+  <h2 class="section-title" data-i18n="aboutTitle">Sobre</h2>
+  <div class="about">
+    <p data-i18n="aboutText1">A KIM Software Solutions oferece suporte técnico remoto, manutenção preventiva, segurança digital, backup de dados e soluções para Windows, Linux e Android.</p>
+    <br>
+    <p data-i18n="aboutText2">Nosso objetivo é ajudar pessoas e pequenos negócios a utilizarem seus equipamentos com mais segurança, organização e eficiência.</p>
+  </div>
 </section>
 
-<section id="clientes">
-    <h2 class="section-title">Área do Cliente</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>RustDesk</h3>
-            <p>Baixe o RustDesk para permitir atendimento remoto autorizado.</p>
-            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
-                Baixar RustDesk
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Session Messenger</h3>
-            <p>Use o Session para comunicação privada durante o atendimento.</p>
-            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
-                Baixar Session
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Firefox</h3>
-            <p>Navegador recomendado para segurança, privacidade e produtividade.</p>
-            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
-                Baixar Firefox
-            </a>
-        </div>
-
-    </div>
+<section id="clients">
+  <h2 class="section-title" data-i18n="clientsTitle">Área do Cliente</h2>
+  <div class="services">
+    <article class="card">
+      <h3>RustDesk</h3>
+      <p data-i18n="rustdeskText">Baixe o RustDesk para permitir atendimento remoto autorizado.</p>
+      <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer" data-i18n="downloadRustdesk">Baixar RustDesk</a>
+    </article>
+    <article class="card">
+      <h3>Session Messenger</h3>
+      <p data-i18n="sessionText">Use o Session para comunicação privada durante o atendimento.</p>
+      <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer" data-i18n="downloadSession">Baixar Session</a>
+    </article>
+    <article class="card">
+      <h3>Firefox</h3>
+      <p data-i18n="firefoxText">Navegador recomendado para segurança, privacidade e produtividade.</p>
+      <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer" data-i18n="downloadFirefox">Baixar Firefox</a>
+    </article>
+  </div>
 </section>
 
-<section id="contato" class="contact">
-    <h2 class="section-title">Pedido de Suporte e Pagamento</h2>
-
-    <div class="contact-box">
-        <p><strong>Como solicitar suporte:</strong></p>
-        <p>
-            Entre em contato por e-mail ou pelo Session,
-            explique o problema e aguarde a análise inicial.
-        </p>
-
-        <div class="info-box">
-            <h3>E-mail</h3>
-            <a href="mailto:kimsoftwaresolutions@gmail.com">
-                kimsoftwaresolutions@gmail.com
-            </a>
-        </div>
-
-        <div class="info-box">
-            <h3>Whatsapp</h3>
-            <p class="long-text">
-                49 93300-2981
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Pagamento</h3>
-            <p><strong>PIX:</strong> disponível para clientes no Brasil.</p>
-            <p><strong>PayPal:</strong> disponível para clientes internacionais.</p>
-            <br>
-            <p>
-                Os dados de pagamento serão enviados após a análise e aprovação do serviço.
-            </p>
-        </div>
+<section id="contact" class="contact">
+  <h2 class="section-title" data-i18n="contactTitle">Pedido de Suporte e Pagamento</h2>
+  <div class="contact-box">
+    <p><strong data-i18n="howToTitle">Como solicitar suporte:</strong></p>
+    <p data-i18n="howToText">Entre em contato por e-mail ou pelo Session, explique o problema e aguarde a análise inicial.</p>
+    <div class="info-box">
+      <h3 data-i18n="emailTitle">E-mail</h3>
+      <a href="mailto:kimsoftwaresolutions@gmail.com">kimsoftwaresolutions@gmail.com</a>
     </div>
-</section>
-
-</div>
-
-<!-- ESPAÑOL -->
-
-<div data-lang="es">
-
-<section id="servicios-es">
-    <h2 class="section-title">Servicios</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>Soporte Remoto</h3>
-            <p>Atención online para resolver problemas técnicos de forma rápida y segura.</p>
-        </div>
-
-        <div class="card">
-            <h3>Mantenimiento de Computadoras</h3>
-            <p>Optimización, limpieza del sistema, corrección de errores y mejora del rendimiento.</p>
-        </div>
-
-        <div class="card">
-            <h3>Seguridad Digital</h3>
-            <p>Eliminación de virus, protección de datos y orientación para un uso más seguro.</p>
-        </div>
-
-        <div class="card">
-            <h3>Backup y Recuperación</h3>
-            <p>Copia, organización y recuperación básica de archivos importantes.</p>
-        </div>
-
-        <div class="card">
-            <h3>Instalación y Configuración</h3>
-            <p>Instalación de programas, navegadores, periféricos y herramientas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Windows y Linux</h3>
-            <p>Soporte, migración, configuración inicial y mantenimiento de sistemas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Dispositivos Android</h3>
-            <p>Backup, restauración, migración de datos, actualización y optimización de dispositivos Android.</p>
-        </div>
-
+    <div class="info-box">
+      <h3>WhatsApp</h3>
+      <p class="long-text">49 93300-2981</p>
     </div>
-</section>
-
-<section>
-    <h2 class="section-title">Sobre Nosotros</h2>
-
-    <div class="about">
-        <p>
-            KIM Software Solutions ofrece soporte técnico remoto,
-            mantenimiento preventivo, seguridad digital, backup de datos
-            y soluciones para Windows, Linux y Android.
-        </p>
-
-        <br>
-
-        <p>
-            Nuestro objetivo es ayudar a personas y pequeños negocios
-            a utilizar sus equipos con mayor seguridad,
-            organización y eficiencia.
-        </p>
+    <div class="info-box">
+      <h3 data-i18n="paymentTitle">Pagamento</h3>
+      <p><strong>PIX:</strong> <span data-i18n="pixText">disponível para clientes no Brasil.</span></p>
+      <p><strong>PayPal:</strong> <span data-i18n="paypalText">disponível para clientes internacionais.</span></p>
+      <br>
+      <p data-i18n="paymentDetails">Os dados de pagamento serão enviados após a análise e aprovação do serviço.</p>
     </div>
+  </div>
 </section>
-
-<section>
-    <h2 class="section-title">Área del Cliente</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>RustDesk</h3>
-            <p>Descarga RustDesk para permitir atención remota autorizada.</p>
-            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
-                Descargar RustDesk
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Session Messenger</h3>
-            <p>Usa Session para comunicación privada durante la atención.</p>
-            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
-                Descargar Session
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Firefox</h3>
-            <p>Navegador recomendado para seguridad, privacidad y productividad.</p>
-            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
-                Descargar Firefox
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact">
-    <h2 class="section-title">Solicitud de Soporte y Pago</h2>
-
-    <div class="contact-box">
-        <p><strong>Cómo solicitar soporte:</strong></p>
-        <p>
-            Contacta por correo electrónico o mediante Session,
-            explica el problema y espera el análisis inicial.
-        </p>
-
-        <div class="info-box">
-            <h3>Correo electrónico</h3>
-            <a href="mailto:kimsoftwaresolutions@gmail.com">
-                kimsoftwaresolutions@gmail.com
-            </a>
-        </div>
-
-        <div class="info-box">
-            <h3>Whatsapp</h3>
-            <p class="long-text">
-                49 93300-2981
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Pago</h3>
-            <p><strong>PIX:</strong> disponible para clientes en Brasil.</p>
-            <p><strong>PayPal:</strong> disponible para clientes internacionales.</p>
-            <br>
-            <p>
-                Los datos de pago serán enviados después del análisis y aprobación del servicio.
-            </p>
-        </div>
-    </div>
-</section>
-
-</div>
-
-<!-- ENGLISH -->
-
-<div data-lang="en">
-
-<section id="services-en">
-    <h2 class="section-title">Services</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>Remote Support</h3>
-            <p>Online assistance to solve technical problems quickly and securely.</p>
-        </div>
-
-        <div class="card">
-            <h3>Computer Maintenance</h3>
-            <p>System optimization, cleanup, troubleshooting and performance improvement.</p>
-        </div>
-
-        <div class="card">
-            <h3>Digital Security</h3>
-            <p>Virus removal, data protection and guidance for safer technology use.</p>
-        </div>
-
-        <div class="card">
-            <h3>Backup and Recovery</h3>
-            <p>Backup, organization and basic recovery of important files.</p>
-        </div>
-
-        <div class="card">
-            <h3>Installation and Setup</h3>
-            <p>Installation of software, browsers, peripherals and productivity tools.</p>
-        </div>
-
-        <div class="card">
-            <h3>Windows and Linux</h3>
-            <p>Support, migration, initial setup and system maintenance.</p>
-        </div>
-
-        <div class="card">
-            <h3>Android Devices</h3>
-            <p>Backup, restoration, data migration, system updates and Android optimization.</p>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">About Us</h2>
-
-    <div class="about">
-        <p>
-            KIM Software Solutions provides remote technical support,
-            preventive maintenance, digital security, data backup
-            and solutions for Windows, Linux and Android.
-        </p>
-
-        <br>
-
-        <p>
-            Our goal is to help individuals and small businesses
-            use their devices with greater security,
-            organization and efficiency.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">Client Area</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>RustDesk</h3>
-            <p>Download RustDesk to allow authorized remote assistance.</p>
-            <a class="btn" href="https://rustdesk.com/download" target="_blank" rel="noopener noreferrer">
-                Download RustDesk
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Session Messenger</h3>
-            <p>Use Session for private communication during support.</p>
-            <a class="btn" href="https://getsession.org/download" target="_blank" rel="noopener noreferrer">
-                Download Session
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Firefox</h3>
-            <p>Recommended browser for security, privacy and productivity.</p>
-            <a class="btn" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">
-                Download Firefox
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact">
-    <h2 class="section-title">Support Request and Payment</h2>
-
-    <div class="contact-box">
-        <p><strong>How to request support:</strong></p>
-        <p>
-            Contact us by email or through Session,
-            explain the problem and wait for the initial assessment.
-        </p>
-
-        <div class="info-box">
-            <h3>Email</h3>
-            <a href="mailto:kimsoftwaresolutions@gmail.com">
-                kimsoftwaresolutions@gmail.com
-            </a>
-        </div>
-
-        <div class="info-box">
-            <h3>Whatsapp</h3>
-            <p class="long-text">
-                49 93300-2981
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Payment</h3>
-            <p><strong>PIX:</strong> available for customers in Brazil.</p>
-            <p><strong>PayPal:</strong> available for international customers.</p>
-            <br>
-            <p>
-                Payment details will be sent after the service has been reviewed and approved.
-            </p>
-        </div>
-    </div>
-</section>
-
-</div>
+</main>
 
 <div class="back-home">
-    <a class="btn" href="index.html">
-        Voltar ao início / Volver al inicio / Back to home
-    </a>
+  <a class="btn" href="index.html" data-i18n="backHome">Voltar ao início</a>
 </div>
-
-<footer>
-    © 2026 KIM Software Solutions. Todos os direitos reservados.
-</footer>
+<footer><span data-i18n="copyright">© 2026 KIM Software Solutions. Todos os direitos reservados.</span></footer>
 
 <script>
-function changeLanguage(language, button){
-    const languageSections = document.querySelectorAll("[data-lang]");
-    const buttons = document.querySelectorAll(".language-button");
-
-    languageSections.forEach(section => {
-        section.classList.remove("active");
-    });
-
-    buttons.forEach(item => {
-        item.classList.remove("active");
-    });
-
-    document
-        .querySelector('[data-lang="' + language + '"]')
-        .classList.add("active");
-
-    button.classList.add("active");
-
-    document.documentElement.lang =
-        language === "pt" ? "pt-BR" :
-        language === "es" ? "es" : "en";
+const translations = {
+pt: {
+  navServices:"Serviços",navAbout:"Sobre",navClients:"Área do Cliente",navContact:"Contato",
+  servicesTitle:"Serviços",remoteTitle:"Suporte Remoto",remoteText:"Atendimento online para resolver problemas técnicos de forma rápida e segura.",
+  maintenanceTitle:"Manutenção de Computadores",maintenanceText:"Otimização, limpeza de sistema, correção de erros e melhoria de desempenho.",
+  securityTitle:"Segurança Digital",securityText:"Remoção de vírus, proteção de dados e orientação para uso mais seguro.",
+  backupTitle:"Backup e Recuperação",backupText:"Cópia, organização e recuperação básica de arquivos importantes.",
+  installTitle:"Instalação e Configuração",installText:"Instalação de softwares, navegadores, periféricos e ferramentas.",
+  systemsTitle:"Windows e Linux",systemsText:"Suporte, migração, configuração inicial e manutenção de sistemas.",
+  androidTitle:"Dispositivos Android",androidText:"Backup, restauração, migração de dados, atualização e otimização de dispositivos Android.",
+  aboutTitle:"Sobre",aboutText1:"A KIM Software Solutions oferece suporte técnico remoto, manutenção preventiva, segurança digital, backup de dados e soluções para Windows, Linux e Android.",
+  aboutText2:"Nosso objetivo é ajudar pessoas e pequenos negócios a utilizarem seus equipamentos com mais segurança, organização e eficiência.",
+  clientsTitle:"Área do Cliente",rustdeskText:"Baixe o RustDesk para permitir atendimento remoto autorizado.",downloadRustdesk:"Baixar RustDesk",
+  sessionText:"Use o Session para comunicação privada durante o atendimento.",downloadSession:"Baixar Session",
+  firefoxText:"Navegador recomendado para segurança, privacidade e produtividade.",downloadFirefox:"Baixar Firefox",
+  contactTitle:"Pedido de Suporte e Pagamento",howToTitle:"Como solicitar suporte:",howToText:"Entre em contato por e-mail ou pelo Session, explique o problema e aguarde a análise inicial.",
+  emailTitle:"E-mail",paymentTitle:"Pagamento",pixText:"disponível para clientes no Brasil.",paypalText:"disponível para clientes internacionais.",
+  paymentDetails:"Os dados de pagamento serão enviados após a análise e aprovação do serviço.",backHome:"Voltar ao início",
+  copyright:"© 2026 KIM Software Solutions. Todos os direitos reservados."
+},
+es: {
+  navServices:"Servicios",navAbout:"Acerca de",navClients:"Área del Cliente",navContact:"Contacto",
+  servicesTitle:"Servicios",remoteTitle:"Soporte Remoto",remoteText:"Asistencia en línea para resolver problemas técnicos de forma rápida y segura.",
+  maintenanceTitle:"Mantenimiento de Computadoras",maintenanceText:"Optimización, limpieza del sistema, corrección de errores y mejora del rendimiento.",
+  securityTitle:"Seguridad Digital",securityText:"Eliminación de virus, protección de datos y orientación para un uso más seguro.",
+  backupTitle:"Copias de Seguridad y Recuperación",backupText:"Copia, organización y recuperación básica de archivos importantes.",
+  installTitle:"Instalación y Configuración",installText:"Instalación de programas, navegadores, periféricos y herramientas.",
+  systemsTitle:"Windows y Linux",systemsText:"Soporte, migración, configuración inicial y mantenimiento de sistemas.",
+  androidTitle:"Dispositivos Android",androidText:"Copias de seguridad, restauración, migración de datos, actualizaciones y optimización de dispositivos Android.",
+  aboutTitle:"Acerca de Nosotros",aboutText1:"KIM Software Solutions ofrece soporte técnico remoto, mantenimiento preventivo, seguridad digital, copias de seguridad y soluciones para Windows, Linux y Android.",
+  aboutText2:"Nuestro objetivo es ayudar a personas y pequeños negocios a utilizar sus equipos con mayor seguridad, organización y eficiencia.",
+  clientsTitle:"Área del Cliente",rustdeskText:"Descarga RustDesk para permitir la asistencia remota autorizada.",downloadRustdesk:"Descargar RustDesk",
+  sessionText:"Usa Session para comunicarte de forma privada durante la asistencia.",downloadSession:"Descargar Session",
+  firefoxText:"Navegador recomendado por su seguridad, privacidad y productividad.",downloadFirefox:"Descargar Firefox",
+  contactTitle:"Solicitud de Soporte y Pago",howToTitle:"Cómo solicitar soporte:",howToText:"Contacta por correo electrónico o mediante Session, explica el problema y espera el análisis inicial.",
+  emailTitle:"Correo electrónico",paymentTitle:"Pago",pixText:"disponible para clientes en Brasil.",paypalText:"disponible para clientes internacionales.",
+  paymentDetails:"Los datos de pago se enviarán después del análisis y la aprobación del servicio.",backHome:"Volver al inicio",
+  copyright:"© 2026 KIM Software Solutions. Todos los derechos reservados."
+},
+en: {
+  navServices:"Services",navAbout:"About",navClients:"Client Area",navContact:"Contact",
+  servicesTitle:"Services",remoteTitle:"Remote Support",remoteText:"Online assistance to solve technical problems quickly and securely.",
+  maintenanceTitle:"Computer Maintenance",maintenanceText:"System optimization, cleanup, troubleshooting and performance improvement.",
+  securityTitle:"Digital Security",securityText:"Virus removal, data protection and guidance for safer technology use.",
+  backupTitle:"Backup and Recovery",backupText:"Backup, organization and basic recovery of important files.",
+  installTitle:"Installation and Setup",installText:"Installation of software, browsers, peripherals and tools.",
+  systemsTitle:"Windows and Linux",systemsText:"Support, migration, initial setup and system maintenance.",
+  androidTitle:"Android Devices",androidText:"Backup, restoration, data migration, updates and Android device optimization.",
+  aboutTitle:"About Us",aboutText1:"KIM Software Solutions provides remote technical support, preventive maintenance, digital security, data backup and solutions for Windows, Linux and Android.",
+  aboutText2:"Our goal is to help individuals and small businesses use their devices with greater security, organization and efficiency.",
+  clientsTitle:"Client Area",rustdeskText:"Download RustDesk to allow authorized remote assistance.",downloadRustdesk:"Download RustDesk",
+  sessionText:"Use Session for private communication during support.",downloadSession:"Download Session",
+  firefoxText:"A browser recommended for security, privacy and productivity.",downloadFirefox:"Download Firefox",
+  contactTitle:"Support Request and Payment",howToTitle:"How to request support:",howToText:"Contact us by email or through Session, explain the problem and wait for the initial assessment.",
+  emailTitle:"Email",paymentTitle:"Payment",pixText:"available to customers in Brazil.",paypalText:"available to international customers.",
+  paymentDetails:"Payment details will be sent after the service has been reviewed and approved.",backHome:"Back to home",
+  copyright:"© 2026 KIM Software Solutions. All rights reserved."
+},
+ru: {
+  navServices:"Услуги",navAbout:"О нас",navClients:"Для клиентов",navContact:"Контакты",
+  servicesTitle:"Услуги",remoteTitle:"Удалённая поддержка",remoteText:"Онлайн-помощь для быстрого и безопасного решения технических проблем.",
+  maintenanceTitle:"Обслуживание компьютеров",maintenanceText:"Оптимизация и очистка системы, устранение ошибок и повышение производительности.",
+  securityTitle:"Цифровая безопасность",securityText:"Удаление вирусов, защита данных и рекомендации по безопасному использованию устройств.",
+  backupTitle:"Резервное копирование и восстановление",backupText:"Копирование, организация и базовое восстановление важных файлов.",
+  installTitle:"Установка и настройка",installText:"Установка программ, браузеров, периферийных устройств и инструментов.",
+  systemsTitle:"Windows и Linux",systemsText:"Поддержка, перенос данных, первоначальная настройка и обслуживание систем.",
+  androidTitle:"Устройства Android",androidText:"Резервное копирование, восстановление, перенос данных, обновление и оптимизация устройств Android.",
+  aboutTitle:"О нас",aboutText1:"KIM Software Solutions предоставляет удалённую техническую поддержку, профилактическое обслуживание, цифровую безопасность, резервное копирование данных и решения для Windows, Linux и Android.",
+  aboutText2:"Наша цель — помогать частным пользователям и малому бизнесу использовать свои устройства безопаснее, организованнее и эффективнее.",
+  clientsTitle:"Для клиентов",rustdeskText:"Скачайте RustDesk, чтобы разрешить авторизованное удалённое обслуживание.",downloadRustdesk:"Скачать RustDesk",
+  sessionText:"Используйте Session для конфиденциального общения во время обслуживания.",downloadSession:"Скачать Session",
+  firefoxText:"Браузер, рекомендованный для безопасности, конфиденциальности и продуктивности.",downloadFirefox:"Скачать Firefox",
+  contactTitle:"Запрос поддержки и оплата",howToTitle:"Как запросить поддержку:",howToText:"Свяжитесь с нами по электронной почте или через Session, опишите проблему и дождитесь первичной оценки.",
+  emailTitle:"Электронная почта",paymentTitle:"Оплата",pixText:"доступен для клиентов в Бразилии.",paypalText:"доступен для международных клиентов.",
+  paymentDetails:"Платёжные реквизиты будут отправлены после оценки и подтверждения услуги.",backHome:"На главную",
+  copyright:"© 2026 KIM Software Solutions. Все права защищены."
+},
+fr: {
+  navServices:"Services",navAbout:"À propos",navClients:"Espace client",navContact:"Contact",
+  servicesTitle:"Services",remoteTitle:"Assistance à distance",remoteText:"Une assistance en ligne pour résoudre les problèmes techniques rapidement et en toute sécurité.",
+  maintenanceTitle:"Maintenance informatique",maintenanceText:"Optimisation et nettoyage du système, correction des erreurs et amélioration des performances.",
+  securityTitle:"Sécurité numérique",securityText:"Suppression des virus, protection des données et conseils pour une utilisation plus sûre.",
+  backupTitle:"Sauvegarde et récupération",backupText:"Copie, organisation et récupération de base des fichiers importants.",
+  installTitle:"Installation et configuration",installText:"Installation de logiciels, navigateurs, périphériques et outils.",
+  systemsTitle:"Windows et Linux",systemsText:"Assistance, migration, configuration initiale et maintenance des systèmes.",
+  androidTitle:"Appareils Android",androidText:"Sauvegarde, restauration, migration des données, mises à jour et optimisation des appareils Android.",
+  aboutTitle:"À propos de nous",aboutText1:"KIM Software Solutions propose une assistance technique à distance, de la maintenance préventive, de la sécurité numérique, la sauvegarde des données et des solutions pour Windows, Linux et Android.",
+  aboutText2:"Notre objectif est d'aider les particuliers et les petites entreprises à utiliser leurs équipements avec davantage de sécurité, d'organisation et d'efficacité.",
+  clientsTitle:"Espace client",rustdeskText:"Téléchargez RustDesk pour autoriser une assistance à distance.",downloadRustdesk:"Télécharger RustDesk",
+  sessionText:"Utilisez Session pour communiquer en privé pendant l'assistance.",downloadSession:"Télécharger Session",
+  firefoxText:"Un navigateur recommandé pour la sécurité, la confidentialité et la productivité.",downloadFirefox:"Télécharger Firefox",
+  contactTitle:"Demande d'assistance et paiement",howToTitle:"Comment demander de l'assistance :",howToText:"Contactez-nous par e-mail ou via Session, expliquez le problème et attendez l'évaluation initiale.",
+  emailTitle:"E-mail",paymentTitle:"Paiement",pixText:"disponible pour les clients au Brésil.",paypalText:"disponible pour les clients internationaux.",
+  paymentDetails:"Les informations de paiement seront envoyées après l'évaluation et l'approbation du service.",backHome:"Retour à l'accueil",
+  copyright:"© 2026 KIM Software Solutions. Tous droits réservés."
+},
+it: {
+  navServices:"Servizi",navAbout:"Chi siamo",navClients:"Area clienti",navContact:"Contatti",
+  servicesTitle:"Servizi",remoteTitle:"Assistenza remota",remoteText:"Assistenza online per risolvere problemi tecnici in modo rapido e sicuro.",
+  maintenanceTitle:"Manutenzione computer",maintenanceText:"Ottimizzazione e pulizia del sistema, correzione degli errori e miglioramento delle prestazioni.",
+  securityTitle:"Sicurezza digitale",securityText:"Rimozione dei virus, protezione dei dati e indicazioni per un uso più sicuro.",
+  backupTitle:"Backup e recupero",backupText:"Copia, organizzazione e recupero di base dei file importanti.",
+  installTitle:"Installazione e configurazione",installText:"Installazione di software, browser, periferiche e strumenti.",
+  systemsTitle:"Windows e Linux",systemsText:"Assistenza, migrazione, configurazione iniziale e manutenzione dei sistemi.",
+  androidTitle:"Dispositivi Android",androidText:"Backup, ripristino, migrazione dei dati, aggiornamenti e ottimizzazione dei dispositivi Android.",
+  aboutTitle:"Chi siamo",aboutText1:"KIM Software Solutions offre assistenza tecnica remota, manutenzione preventiva, sicurezza digitale, backup dei dati e soluzioni per Windows, Linux e Android.",
+  aboutText2:"Il nostro obiettivo è aiutare privati e piccole imprese a utilizzare i propri dispositivi con maggiore sicurezza, organizzazione ed efficienza.",
+  clientsTitle:"Area clienti",rustdeskText:"Scarica RustDesk per consentire un'assistenza remota autorizzata.",downloadRustdesk:"Scarica RustDesk",
+  sessionText:"Usa Session per comunicare in modo privato durante l'assistenza.",downloadSession:"Scarica Session",
+  firefoxText:"Browser consigliato per sicurezza, privacy e produttività.",downloadFirefox:"Scarica Firefox",
+  contactTitle:"Richiesta di assistenza e pagamento",howToTitle:"Come richiedere assistenza:",howToText:"Contattaci via e-mail o tramite Session, descrivi il problema e attendi la valutazione iniziale.",
+  emailTitle:"E-mail",paymentTitle:"Pagamento",pixText:"disponibile per i clienti in Brasile.",paypalText:"disponibile per i clienti internazionali.",
+  paymentDetails:"I dati per il pagamento saranno inviati dopo la valutazione e l'approvazione del servizio.",backHome:"Torna alla pagina iniziale",
+  copyright:"© 2026 KIM Software Solutions. Tutti i diritti riservati."
+},
+ca: {
+  navServices:"Serveis",navAbout:"Sobre nosaltres",navClients:"Àrea de clients",navContact:"Contacte",
+  servicesTitle:"Serveis",remoteTitle:"Assistència remota",remoteText:"Assistència en línia per resoldre problemes tècnics de manera ràpida i segura.",
+  maintenanceTitle:"Manteniment d'ordinadors",maintenanceText:"Optimització i neteja del sistema, correcció d'errors i millora del rendiment.",
+  securityTitle:"Seguretat digital",securityText:"Eliminació de virus, protecció de dades i orientació per fer un ús més segur de la tecnologia.",
+  backupTitle:"Còpies de seguretat i recuperació",backupText:"Còpia, organització i recuperació bàsica de fitxers importants.",
+  installTitle:"Instal·lació i configuració",installText:"Instal·lació de programari, navegadors, perifèrics i eines.",
+  systemsTitle:"Windows i Linux",systemsText:"Assistència, migració, configuració inicial i manteniment dels sistemes.",
+  androidTitle:"Dispositius Android",androidText:"Còpia de seguretat, restauració, migració de dades, actualitzacions i optimització de dispositius Android.",
+  aboutTitle:"Sobre nosaltres",aboutText1:"KIM Software Solutions ofereix assistència tècnica remota, manteniment preventiu, seguretat digital, còpies de seguretat i solucions per a Windows, Linux i Android.",
+  aboutText2:"El nostre objectiu és ajudar particulars i petites empreses a utilitzar els seus equips amb més seguretat, organització i eficiència.",
+  clientsTitle:"Àrea de clients",rustdeskText:"Descarrega RustDesk per permetre una assistència remota autoritzada.",downloadRustdesk:"Descarrega RustDesk",
+  sessionText:"Fes servir Session per comunicar-te de manera privada durant l'assistència.",downloadSession:"Descarrega Session",
+  firefoxText:"Navegador recomanat per la seva seguretat, privadesa i productivitat.",downloadFirefox:"Descarrega Firefox",
+  contactTitle:"Sol·licitud d'assistència i pagament",howToTitle:"Com sol·licitar assistència:",howToText:"Contacta'ns per correu electrònic o mitjançant Session, explica el problema i espera l'anàlisi inicial.",
+  emailTitle:"Correu electrònic",paymentTitle:"Pagament",pixText:"disponible per a clients del Brasil.",paypalText:"disponible per a clients internacionals.",
+  paymentDetails:"Les dades de pagament s'enviaran després de l'anàlisi i l'aprovació del servei.",backHome:"Torna a l'inici",
+  copyright:"© 2026 KIM Software Solutions. Tots els drets reservats."
 }
-</script>
+};
 
+const languageTags = {pt:"pt-BR",es:"es",en:"en",ru:"ru",fr:"fr",it:"it",ca:"ca"};
+function changeLanguage(language, savePreference=true) {
+  const dictionary = translations[language] || translations.pt;
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.getAttribute("data-i18n");
+    if (Object.prototype.hasOwnProperty.call(dictionary,key)) {
+      element.textContent = dictionary[key];
+    }
+  });
+  document.documentElement.lang = languageTags[language] || "pt-BR";
+  document.querySelectorAll(".language-button").forEach(button => {
+    const active = button.dataset.language === language;
+    button.classList.toggle("active",active);
+    button.setAttribute("aria-pressed",String(active));
+  });
+  if (savePreference) {
+    try { localStorage.setItem("kimsolutions-language",language); } catch(error) {}
+  }
+}
+document.querySelectorAll(".language-button").forEach(button => {
+  button.addEventListener("click",() => changeLanguage(button.dataset.language));
+});
+function detectLanguage() {
+  try {
+    const saved = localStorage.getItem("kimsolutions-language");
+    if (saved && translations[saved]) return saved;
+  } catch(error) {}
+  const browserLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || "pt-BR";
+  const shortLanguage = browserLanguage.toLowerCase().split("-")[0];
+  return translations[shortLanguage] ? shortLanguage : "pt";
+}
+changeLanguage(detectLanguage(),false);
+</script>
 </body>
 </html>
